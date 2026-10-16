@@ -1,0 +1,5 @@
+dist
+node_modules
+package-lock.json
+COIN_CLICKER_ROADMAP.md
+tmp

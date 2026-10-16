@@ -1,0 +1,477 @@
+[
+  {
+    "id": "achievement.click-1",
+    "nameKey": "achievement.click-1.name",
+    "metric": "clicks",
+    "target": "10",
+    "rewards": [
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "5"
+      }
+    ]
+  },
+  {
+    "id": "achievement.click-2",
+    "nameKey": "achievement.click-2.name",
+    "metric": "clicks",
+    "target": "100",
+    "rewards": [
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "10"
+      }
+    ]
+  },
+  {
+    "id": "achievement.click-3",
+    "nameKey": "achievement.click-3.name",
+    "metric": "clicks",
+    "target": "1000",
+    "rewards": [
+      {
+        "kind": "item",
+        "itemId": "chest.silver",
+        "quantity": 1
+      },
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "10"
+      }
+    ]
+  },
+  {
+    "id": "achievement.click-4",
+    "nameKey": "achievement.click-4.name",
+    "metric": "clicks",
+    "target": "10000",
+    "rewards": [
+      {
+        "kind": "item",
+        "itemId": "chest.gold",
+        "quantity": 1
+      },
+      {
+        "kind": "item",
+        "itemId": "key.star",
+        "quantity": 1
+      },
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "20"
+      }
+    ]
+  },
+  {
+    "id": "achievement.production-1",
+    "nameKey": "achievement.production-1.name",
+    "metric": "produced",
+    "target": "1e3",
+    "rewards": [
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "5"
+      }
+    ]
+  },
+  {
+    "id": "achievement.production-2",
+    "nameKey": "achievement.production-2.name",
+    "metric": "produced",
+    "target": "1e4",
+    "rewards": [
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "10"
+      }
+    ]
+  },
+  {
+    "id": "achievement.production-3",
+    "nameKey": "achievement.production-3.name",
+    "metric": "produced",
+    "target": "1e6",
+    "rewards": [
+      {
+        "kind": "item",
+        "itemId": "chest.silver",
+        "quantity": 1
+      },
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "10"
+      }
+    ]
+  },
+  {
+    "id": "achievement.production-4",
+    "nameKey": "achievement.production-4.name",
+    "metric": "produced",
+    "target": "1e9",
+    "rewards": [
+      {
+        "kind": "item",
+        "itemId": "chest.gold",
+        "quantity": 1
+      },
+      {
+        "kind": "item",
+        "itemId": "key.star",
+        "quantity": 1
+      },
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "20"
+      }
+    ]
+  },
+  {
+    "id": "achievement.production-5",
+    "nameKey": "achievement.production-5.name",
+    "metric": "produced",
+    "target": "1e12",
+    "rewards": [
+      {
+        "kind": "item",
+        "itemId": "chest.gold",
+        "quantity": 1
+      },
+      {
+        "kind": "item",
+        "itemId": "key.star",
+        "quantity": 1
+      },
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "20"
+      }
+    ]
+  },
+  {
+    "id": "achievement.production-6",
+    "nameKey": "achievement.production-6.name",
+    "metric": "produced",
+    "target": "1e15",
+    "rewards": [
+      {
+        "kind": "item",
+        "itemId": "chest.gold",
+        "quantity": 1
+      },
+      {
+        "kind": "item",
+        "itemId": "key.star",
+        "quantity": 1
+      },
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "20"
+      }
+    ]
+  },
+  {
+    "id": "achievement.machines-1",
+    "nameKey": "achievement.machines-1.name",
+    "metric": "machines",
+    "target": "1",
+    "rewards": [
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "5"
+      }
+    ]
+  },
+  {
+    "id": "achievement.machines-2",
+    "nameKey": "achievement.machines-2.name",
+    "metric": "machines",
+    "target": "10",
+    "rewards": [
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "10"
+      }
+    ]
+  },
+  {
+    "id": "achievement.machines-3",
+    "nameKey": "achievement.machines-3.name",
+    "metric": "machines",
+    "target": "50",
+    "rewards": [
+      {
+        "kind": "item",
+        "itemId": "chest.silver",
+        "quantity": 1
+      },
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "10"
+      }
+    ]
+  },
+  {
+    "id": "achievement.machines-4",
+    "nameKey": "achievement.machines-4.name",
+    "metric": "machines",
+    "target": "100",
+    "rewards": [
+      {
+        "kind": "item",
+        "itemId": "chest.gold",
+        "quantity": 1
+      },
+      {
+        "kind": "item",
+        "itemId": "key.star",
+        "quantity": 1
+      },
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "20"
+      }
+    ]
+  },
+  {
+    "id": "achievement.upgrades-1",
+    "nameKey": "achievement.upgrades-1.name",
+    "metric": "upgrades",
+    "target": "1",
+    "rewards": [
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "5"
+      }
+    ]
+  },
+  {
+    "id": "achievement.upgrades-2",
+    "nameKey": "achievement.upgrades-2.name",
+    "metric": "upgrades",
+    "target": "3",
+    "rewards": [
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "10"
+      }
+    ]
+  },
+  {
+    "id": "achievement.upgrades-3",
+    "nameKey": "achievement.upgrades-3.name",
+    "metric": "upgrades",
+    "target": "6",
+    "rewards": [
+      {
+        "kind": "item",
+        "itemId": "chest.silver",
+        "quantity": 1
+      },
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "10"
+      }
+    ]
+  },
+  {
+    "id": "achievement.gold-rain-1",
+    "nameKey": "achievement.gold-rain-1.name",
+    "metric": "eventCoins",
+    "target": "10",
+    "rewards": [
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "5"
+      }
+    ]
+  },
+  {
+    "id": "achievement.gold-rain-2",
+    "nameKey": "achievement.gold-rain-2.name",
+    "metric": "eventCoins",
+    "target": "100",
+    "rewards": [
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "10"
+      }
+    ]
+  },
+  {
+    "id": "achievement.rainbow-1",
+    "nameKey": "achievement.rainbow-1.name",
+    "metric": "rainbows",
+    "target": "1",
+    "rewards": [
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "5"
+      }
+    ]
+  },
+  {
+    "id": "achievement.rainbow-2",
+    "nameKey": "achievement.rainbow-2.name",
+    "metric": "rainbows",
+    "target": "10",
+    "rewards": [
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "10"
+      }
+    ]
+  },
+  {
+    "id": "achievement.collection-1",
+    "nameKey": "achievement.collection-1.name",
+    "metric": "cards",
+    "target": "1",
+    "rewards": [
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "5"
+      }
+    ]
+  },
+  {
+    "id": "achievement.collection-2",
+    "nameKey": "achievement.collection-2.name",
+    "metric": "cards",
+    "target": "6",
+    "rewards": [
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "10"
+      }
+    ]
+  },
+  {
+    "id": "achievement.collection-3",
+    "nameKey": "achievement.collection-3.name",
+    "metric": "cards",
+    "target": "12",
+    "rewards": [
+      {
+        "kind": "item",
+        "itemId": "chest.silver",
+        "quantity": 1
+      },
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "10"
+      }
+    ]
+  },
+  {
+    "id": "achievement.chests-1",
+    "nameKey": "achievement.chests-1.name",
+    "metric": "chests",
+    "target": "1",
+    "rewards": [
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "5"
+      }
+    ]
+  },
+  {
+    "id": "achievement.chests-2",
+    "nameKey": "achievement.chests-2.name",
+    "metric": "chests",
+    "target": "10",
+    "rewards": [
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "10"
+      }
+    ]
+  },
+  {
+    "id": "achievement.chests-3",
+    "nameKey": "achievement.chests-3.name",
+    "metric": "chests",
+    "target": "50",
+    "rewards": [
+      {
+        "kind": "item",
+        "itemId": "chest.silver",
+        "quantity": 1
+      },
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "10"
+      }
+    ]
+  },
+  {
+    "id": "achievement.daily-1",
+    "nameKey": "achievement.daily-1.name",
+    "metric": "daily",
+    "target": "1",
+    "rewards": [
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "5"
+      }
+    ]
+  },
+  {
+    "id": "achievement.daily-2",
+    "nameKey": "achievement.daily-2.name",
+    "metric": "daily",
+    "target": "7",
+    "rewards": [
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "10"
+      }
+    ]
+  },
+  {
+    "id": "achievement.daily-3",
+    "nameKey": "achievement.daily-3.name",
+    "metric": "daily",
+    "target": "30",
+    "rewards": [
+      {
+        "kind": "item",
+        "itemId": "chest.silver",
+        "quantity": 1
+      },
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "10"
+      }
+    ]
+  }
+]

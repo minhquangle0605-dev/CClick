@@ -1,0 +1,16 @@
+.glossary {
+  font-size: 13px;
+  line-height: 1.8;
+}
+.glossary > div {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+.glossary dt {
+  font-weight: 700;
+  color: #d9e8ff;
+}
+.glossary dd {
+  margin: 3px 0;
+  color: #a9bdd8;
+}

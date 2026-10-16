@@ -1,0 +1,50 @@
+[
+  {
+    "id": "chest.silver",
+    "nameKey": "chest.silver.name",
+    "descriptionKey": "chest.silver.description",
+    "iconId": "efficiency",
+    "keyId": null,
+    "guaranteed": [
+      {
+        "kind": "currency",
+        "currency": "coin",
+        "amount": "500"
+      }
+    ],
+    "draws": [
+      {
+        "tableId": "loot.silver-cards",
+        "count": 1
+      },
+      {
+        "tableId": "loot.silver-extra",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "chest.gold",
+    "nameKey": "chest.gold.name",
+    "descriptionKey": "chest.gold.description",
+    "iconId": "sparkles",
+    "keyId": "key.star",
+    "guaranteed": [
+      {
+        "kind": "currency",
+        "currency": "coin",
+        "amount": "5000"
+      }
+    ],
+    "draws": [
+      {
+        "tableId": "loot.gold-cards",
+        "count": 2
+      },
+      {
+        "tableId": "loot.gold-extra",
+        "count": 1
+      }
+    ]
+  }
+]

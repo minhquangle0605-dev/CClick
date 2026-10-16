@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 2,
+  "contentVersion": "0.2.0",
+  "appVersion": "0.3.0",
+  "savedAtUtc": "2026-10-14T05:00:00.000Z",
+  "payload": {
+    "runId": "fixture-v2",
+    "revision": 120,
+    "wallet": {
+      "coin": "12345.6789",
+      "goldCoin": "0"
+    },
+    "generators": {
+      "generator.hand-press": 2,
+      "generator.auto-press": 1
+    },
+    "purchasedUpgradeIds": ["upgrade.polished-die", "upgrade.precision-drive"],
+    "statistics": {
+      "clicks": 100,
+      "totalProducedCoin": "13278.6789",
+      "totalSpentCoin": "933"
+    },
+    "lastSimulatedAtUtc": "2026-10-14T05:00:00.000Z",
+    "offlineCps": "2.4"
+  },
+  "checksum": "09a4f6753c074ec8be11f2456dfab1e2de74f5915e7fac6a11b566def6b75917"
+}

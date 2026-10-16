@@ -1,0 +1,86 @@
+.journey-panel {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 8px 4px 0;
+  border-top: 1px solid var(--border);
+  min-width: 0;
+}
+.milestone {
+  width: min(34%, 360px);
+  min-width: 160px;
+}
+.milestone-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 11px;
+  color: #93a9c6;
+}
+.milestone-label strong {
+  color: #d7e5f8;
+  margin-left: 8px;
+  font-weight: 600;
+}
+.milestone-track {
+  margin-top: 6px;
+  height: 3px;
+  border-radius: 4px;
+  background: #26344b;
+  overflow: hidden;
+}
+.milestone-track span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+}
+.journey-stats {
+  display: flex;
+  gap: 24px;
+  margin: 0 auto;
+  font-size: 11px;
+}
+.journey-stats > div {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.journey-stats dt {
+  color: #8294af;
+}
+.journey-stats dd {
+  margin: 0;
+  color: #ccdbee;
+  font-variant-numeric: tabular-nums;
+}
+.journey-details {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-left: auto;
+  padding: 8px;
+  min-height: 36px;
+  border: 0;
+  background: transparent;
+  color: #adcaef;
+  font-size: 11px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+@media (max-width: 1000px) {
+  .journey-stats > div:first-child {
+    display: none;
+  }
+  .journey-panel {
+    gap: 12px;
+  }
+}
+@media (max-width: 900px) {
+  .journey-stats {
+    display: none;
+  }
+  .milestone {
+    flex: 1;
+    width: auto;
+  }
+}

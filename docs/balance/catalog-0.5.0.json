@@ -1,0 +1,1424 @@
+{
+  "dailyRewards": [
+    {
+      "day": 1,
+      "rewards": [
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "5"
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "rewards": [
+        {
+          "kind": "item",
+          "itemId": "booster.turbo-mint",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "rewards": [
+        {
+          "kind": "item",
+          "itemId": "chest.silver",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "rewards": [
+        {
+          "kind": "item",
+          "itemId": "booster.power-tap",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "rewards": [
+        {
+          "kind": "item",
+          "itemId": "key.star",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "rewards": [
+        {
+          "kind": "item",
+          "itemId": "booster.time-warp",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "rewards": [
+        {
+          "kind": "item",
+          "itemId": "chest.gold",
+          "quantity": 1
+        },
+        {
+          "kind": "item",
+          "itemId": "key.star",
+          "quantity": 1
+        }
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "id": "achievement.click-1",
+      "nameKey": "achievement.click-1.name",
+      "metric": "clicks",
+      "target": "10",
+      "rewards": [
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "5"
+        }
+      ]
+    },
+    {
+      "id": "achievement.click-2",
+      "nameKey": "achievement.click-2.name",
+      "metric": "clicks",
+      "target": "100",
+      "rewards": [
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "10"
+        }
+      ]
+    },
+    {
+      "id": "achievement.click-3",
+      "nameKey": "achievement.click-3.name",
+      "metric": "clicks",
+      "target": "1000",
+      "rewards": [
+        {
+          "kind": "item",
+          "itemId": "chest.silver",
+          "quantity": 1
+        },
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "10"
+        }
+      ]
+    },
+    {
+      "id": "achievement.click-4",
+      "nameKey": "achievement.click-4.name",
+      "metric": "clicks",
+      "target": "10000",
+      "rewards": [
+        {
+          "kind": "item",
+          "itemId": "chest.gold",
+          "quantity": 1
+        },
+        {
+          "kind": "item",
+          "itemId": "key.star",
+          "quantity": 1
+        },
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "20"
+        }
+      ]
+    },
+    {
+      "id": "achievement.production-1",
+      "nameKey": "achievement.production-1.name",
+      "metric": "produced",
+      "target": "1e3",
+      "rewards": [
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "5"
+        }
+      ]
+    },
+    {
+      "id": "achievement.production-2",
+      "nameKey": "achievement.production-2.name",
+      "metric": "produced",
+      "target": "1e4",
+      "rewards": [
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "10"
+        }
+      ]
+    },
+    {
+      "id": "achievement.production-3",
+      "nameKey": "achievement.production-3.name",
+      "metric": "produced",
+      "target": "1e6",
+      "rewards": [
+        {
+          "kind": "item",
+          "itemId": "chest.silver",
+          "quantity": 1
+        },
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "10"
+        }
+      ]
+    },
+    {
+      "id": "achievement.production-4",
+      "nameKey": "achievement.production-4.name",
+      "metric": "produced",
+      "target": "1e9",
+      "rewards": [
+        {
+          "kind": "item",
+          "itemId": "chest.gold",
+          "quantity": 1
+        },
+        {
+          "kind": "item",
+          "itemId": "key.star",
+          "quantity": 1
+        },
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "20"
+        }
+      ]
+    },
+    {
+      "id": "achievement.production-5",
+      "nameKey": "achievement.production-5.name",
+      "metric": "produced",
+      "target": "1e12",
+      "rewards": [
+        {
+          "kind": "item",
+          "itemId": "chest.gold",
+          "quantity": 1
+        },
+        {
+          "kind": "item",
+          "itemId": "key.star",
+          "quantity": 1
+        },
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "20"
+        }
+      ]
+    },
+    {
+      "id": "achievement.production-6",
+      "nameKey": "achievement.production-6.name",
+      "metric": "produced",
+      "target": "1e15",
+      "rewards": [
+        {
+          "kind": "item",
+          "itemId": "chest.gold",
+          "quantity": 1
+        },
+        {
+          "kind": "item",
+          "itemId": "key.star",
+          "quantity": 1
+        },
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "20"
+        }
+      ]
+    },
+    {
+      "id": "achievement.machines-1",
+      "nameKey": "achievement.machines-1.name",
+      "metric": "machines",
+      "target": "1",
+      "rewards": [
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "5"
+        }
+      ]
+    },
+    {
+      "id": "achievement.machines-2",
+      "nameKey": "achievement.machines-2.name",
+      "metric": "machines",
+      "target": "10",
+      "rewards": [
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "10"
+        }
+      ]
+    },
+    {
+      "id": "achievement.machines-3",
+      "nameKey": "achievement.machines-3.name",
+      "metric": "machines",
+      "target": "50",
+      "rewards": [
+        {
+          "kind": "item",
+          "itemId": "chest.silver",
+          "quantity": 1
+        },
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "10"
+        }
+      ]
+    },
+    {
+      "id": "achievement.machines-4",
+      "nameKey": "achievement.machines-4.name",
+      "metric": "machines",
+      "target": "100",
+      "rewards": [
+        {
+          "kind": "item",
+          "itemId": "chest.gold",
+          "quantity": 1
+        },
+        {
+          "kind": "item",
+          "itemId": "key.star",
+          "quantity": 1
+        },
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "20"
+        }
+      ]
+    },
+    {
+      "id": "achievement.upgrades-1",
+      "nameKey": "achievement.upgrades-1.name",
+      "metric": "upgrades",
+      "target": "1",
+      "rewards": [
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "5"
+        }
+      ]
+    },
+    {
+      "id": "achievement.upgrades-2",
+      "nameKey": "achievement.upgrades-2.name",
+      "metric": "upgrades",
+      "target": "3",
+      "rewards": [
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "10"
+        }
+      ]
+    },
+    {
+      "id": "achievement.upgrades-3",
+      "nameKey": "achievement.upgrades-3.name",
+      "metric": "upgrades",
+      "target": "6",
+      "rewards": [
+        {
+          "kind": "item",
+          "itemId": "chest.silver",
+          "quantity": 1
+        },
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "10"
+        }
+      ]
+    },
+    {
+      "id": "achievement.gold-rain-1",
+      "nameKey": "achievement.gold-rain-1.name",
+      "metric": "eventCoins",
+      "target": "10",
+      "rewards": [
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "5"
+        }
+      ]
+    },
+    {
+      "id": "achievement.gold-rain-2",
+      "nameKey": "achievement.gold-rain-2.name",
+      "metric": "eventCoins",
+      "target": "100",
+      "rewards": [
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "10"
+        }
+      ]
+    },
+    {
+      "id": "achievement.rainbow-1",
+      "nameKey": "achievement.rainbow-1.name",
+      "metric": "rainbows",
+      "target": "1",
+      "rewards": [
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "5"
+        }
+      ]
+    },
+    {
+      "id": "achievement.rainbow-2",
+      "nameKey": "achievement.rainbow-2.name",
+      "metric": "rainbows",
+      "target": "10",
+      "rewards": [
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "10"
+        }
+      ]
+    },
+    {
+      "id": "achievement.collection-1",
+      "nameKey": "achievement.collection-1.name",
+      "metric": "cards",
+      "target": "1",
+      "rewards": [
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "5"
+        }
+      ]
+    },
+    {
+      "id": "achievement.collection-2",
+      "nameKey": "achievement.collection-2.name",
+      "metric": "cards",
+      "target": "6",
+      "rewards": [
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "10"
+        }
+      ]
+    },
+    {
+      "id": "achievement.collection-3",
+      "nameKey": "achievement.collection-3.name",
+      "metric": "cards",
+      "target": "12",
+      "rewards": [
+        {
+          "kind": "item",
+          "itemId": "chest.silver",
+          "quantity": 1
+        },
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "10"
+        }
+      ]
+    },
+    {
+      "id": "achievement.chests-1",
+      "nameKey": "achievement.chests-1.name",
+      "metric": "chests",
+      "target": "1",
+      "rewards": [
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "5"
+        }
+      ]
+    },
+    {
+      "id": "achievement.chests-2",
+      "nameKey": "achievement.chests-2.name",
+      "metric": "chests",
+      "target": "10",
+      "rewards": [
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "10"
+        }
+      ]
+    },
+    {
+      "id": "achievement.chests-3",
+      "nameKey": "achievement.chests-3.name",
+      "metric": "chests",
+      "target": "50",
+      "rewards": [
+        {
+          "kind": "item",
+          "itemId": "chest.silver",
+          "quantity": 1
+        },
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "10"
+        }
+      ]
+    },
+    {
+      "id": "achievement.daily-1",
+      "nameKey": "achievement.daily-1.name",
+      "metric": "daily",
+      "target": "1",
+      "rewards": [
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "5"
+        }
+      ]
+    },
+    {
+      "id": "achievement.daily-2",
+      "nameKey": "achievement.daily-2.name",
+      "metric": "daily",
+      "target": "7",
+      "rewards": [
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "10"
+        }
+      ]
+    },
+    {
+      "id": "achievement.daily-3",
+      "nameKey": "achievement.daily-3.name",
+      "metric": "daily",
+      "target": "30",
+      "rewards": [
+        {
+          "kind": "item",
+          "itemId": "chest.silver",
+          "quantity": 1
+        },
+        {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "10"
+        }
+      ]
+    }
+  ],
+  "balance": {
+    "contentVersion": "0.5.0",
+    "longTermMilestone": "1000000000000000",
+    "initialCoin": "0",
+    "initialGold": "0",
+    "baseClick": "1",
+    "milestoneCoin": "1000",
+    "autosaveSeconds": 10,
+    "offlineCapSeconds": 28800,
+    "offlineEfficiency": "0.5"
+  },
+  "generators": [
+    {
+      "id": "generator.hand-press",
+      "nameKey": "generator.hand-press.name",
+      "descriptionKey": "generator.hand-press.description",
+      "iconId": "hand-press",
+      "basePrice": "15",
+      "baseCps": "0.1",
+      "priceGrowth": "1.15",
+      "unlockAt": "0"
+    },
+    {
+      "id": "generator.auto-press",
+      "nameKey": "generator.auto-press.name",
+      "descriptionKey": "generator.auto-press.description",
+      "iconId": "auto-press",
+      "basePrice": "100",
+      "baseCps": "1",
+      "priceGrowth": "1.15",
+      "unlockAt": "15"
+    },
+    {
+      "id": "generator.mint-workshop",
+      "nameKey": "generator.mint-workshop.name",
+      "descriptionKey": "generator.mint-workshop.description",
+      "iconId": "workshop",
+      "basePrice": "1100",
+      "baseCps": "8",
+      "priceGrowth": "1.15",
+      "unlockAt": "100"
+    },
+    {
+      "id": "generator.mint-factory",
+      "nameKey": "generator.mint-factory.name",
+      "descriptionKey": "generator.mint-factory.description",
+      "iconId": "factory",
+      "basePrice": "12000",
+      "baseCps": "47",
+      "priceGrowth": "1.15",
+      "unlockAt": "1100"
+    },
+    {
+      "id": "generator.plasma-forge",
+      "nameKey": "generator.plasma-forge.name",
+      "descriptionKey": "generator.plasma-forge.description",
+      "iconId": "plasma",
+      "basePrice": "130000",
+      "baseCps": "260",
+      "priceGrowth": "1.15",
+      "unlockAt": "12000"
+    },
+    {
+      "id": "generator.star-core",
+      "nameKey": "generator.star-core.name",
+      "descriptionKey": "generator.star-core.description",
+      "iconId": "star-core",
+      "basePrice": "1400000",
+      "baseCps": "1400",
+      "priceGrowth": "1.15",
+      "unlockAt": "130000"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "upgrade.polished-die",
+      "nameKey": "upgrade.polished-die.name",
+      "descriptionKey": "upgrade.polished-die.description",
+      "iconId": "polished-die",
+      "price": "50",
+      "requires": [],
+      "effect": {
+        "target": "click",
+        "operation": "add",
+        "value": "1"
+      }
+    },
+    {
+      "id": "upgrade.reinforced-die",
+      "nameKey": "upgrade.reinforced-die.name",
+      "descriptionKey": "upgrade.reinforced-die.description",
+      "iconId": "polished-die",
+      "price": "500",
+      "requires": ["upgrade.polished-die"],
+      "effect": {
+        "target": "click",
+        "operation": "add",
+        "value": "4"
+      }
+    },
+    {
+      "id": "upgrade.precision-drive",
+      "nameKey": "upgrade.precision-drive.name",
+      "descriptionKey": "upgrade.precision-drive.description",
+      "iconId": "efficiency",
+      "price": "750",
+      "requires": ["generator.auto-press"],
+      "effect": {
+        "target": "production",
+        "operation": "multiply",
+        "value": "2"
+      }
+    },
+    {
+      "id": "upgrade.silver-resonance",
+      "nameKey": "upgrade.silver-resonance.name",
+      "descriptionKey": "upgrade.silver-resonance.description",
+      "iconId": "polished-die",
+      "price": "5000",
+      "requires": ["upgrade.reinforced-die"],
+      "effect": {
+        "target": "click",
+        "operation": "multiply",
+        "value": "2"
+      }
+    },
+    {
+      "id": "upgrade.assembly-line",
+      "nameKey": "upgrade.assembly-line.name",
+      "descriptionKey": "upgrade.assembly-line.description",
+      "iconId": "efficiency",
+      "price": "15000",
+      "requires": ["generator.mint-workshop", "upgrade.precision-drive"],
+      "effect": {
+        "target": "production",
+        "operation": "multiply",
+        "value": "2"
+      }
+    },
+    {
+      "id": "upgrade.stellar-efficiency",
+      "nameKey": "upgrade.stellar-efficiency.name",
+      "descriptionKey": "upgrade.stellar-efficiency.description",
+      "iconId": "efficiency",
+      "price": "250000",
+      "requires": ["generator.plasma-forge", "upgrade.assembly-line"],
+      "effect": {
+        "target": "production",
+        "operation": "multiply",
+        "value": "2"
+      }
+    }
+  ],
+  "boosters": [
+    {
+      "id": "booster.turbo-mint",
+      "nameKey": "booster.turbo.name",
+      "descriptionKey": "booster.turbo.description",
+      "iconId": "zap",
+      "durationSeconds": 60,
+      "maxDurationSeconds": 120,
+      "warpSeconds": 0,
+      "effects": [
+        {
+          "target": "production",
+          "value": "2",
+          "stackGroup": "booster-production"
+        }
+      ]
+    },
+    {
+      "id": "booster.power-tap",
+      "nameKey": "booster.power.name",
+      "descriptionKey": "booster.power.description",
+      "iconId": "cursor",
+      "durationSeconds": 30,
+      "maxDurationSeconds": 60,
+      "warpSeconds": 0,
+      "effects": [
+        {
+          "target": "click",
+          "value": "3",
+          "stackGroup": "booster-click"
+        }
+      ]
+    },
+    {
+      "id": "booster.golden-magnet",
+      "nameKey": "booster.magnet.name",
+      "descriptionKey": "booster.magnet.description",
+      "iconId": "sparkles",
+      "durationSeconds": 30,
+      "maxDurationSeconds": 60,
+      "warpSeconds": 0,
+      "effects": [
+        {
+          "target": "magnet",
+          "value": "2",
+          "stackGroup": "magnet"
+        }
+      ]
+    },
+    {
+      "id": "booster.time-warp",
+      "nameKey": "booster.warp.name",
+      "descriptionKey": "booster.warp.description",
+      "iconId": "clock",
+      "durationSeconds": 0,
+      "maxDurationSeconds": 0,
+      "warpSeconds": 3600,
+      "effects": []
+    }
+  ],
+  "events": {
+    "temporaryCap": "20",
+    "rain": {
+      "waitMinSeconds": 180,
+      "waitMaxSeconds": 300,
+      "durationSeconds": 15,
+      "count": 10,
+      "spawnEverySeconds": 1,
+      "coinLifetimeSeconds": 6,
+      "goldPerCoin": "1"
+    },
+    "rainbow": {
+      "unlockAt": "10000",
+      "waitMinSeconds": 600,
+      "waitMaxSeconds": 900,
+      "lifetimeSeconds": 8,
+      "frenzySeconds": 20,
+      "maxFrenzySeconds": 40,
+      "productionMultiplier": "3",
+      "clickMultiplier": "3",
+      "goldMultiplier": "2"
+    }
+  },
+  "itemOffers": [
+    {
+      "id": "offer.silver-chest",
+      "itemId": "chest.silver",
+      "goldPrice": "20"
+    },
+    {
+      "id": "offer.gold-chest",
+      "itemId": "chest.gold",
+      "goldPrice": "50"
+    },
+    {
+      "id": "offer.star-key",
+      "itemId": "key.star",
+      "goldPrice": "15"
+    },
+    {
+      "id": "offer.turbo-mint",
+      "itemId": "booster.turbo-mint",
+      "goldPrice": "10"
+    },
+    {
+      "id": "offer.power-tap",
+      "itemId": "booster.power-tap",
+      "goldPrice": "10"
+    },
+    {
+      "id": "offer.golden-magnet",
+      "itemId": "booster.golden-magnet",
+      "goldPrice": "15"
+    },
+    {
+      "id": "offer.time-warp",
+      "itemId": "booster.time-warp",
+      "goldPrice": "40"
+    }
+  ],
+  "cards": [
+    {
+      "id": "card.silver-touch",
+      "nameKey": "card.silver-touch.name",
+      "descriptionKey": "card.silver-touch.description",
+      "iconId": "efficiency",
+      "rarity": "common",
+      "effects": [
+        {
+          "target": "clickPercent",
+          "valuePerLevel": "5"
+        }
+      ]
+    },
+    {
+      "id": "card.mint-gear",
+      "nameKey": "card.mint-gear.name",
+      "descriptionKey": "card.mint-gear.description",
+      "iconId": "efficiency",
+      "rarity": "common",
+      "effects": [
+        {
+          "target": "productionPercent",
+          "valuePerLevel": "4"
+        }
+      ]
+    },
+    {
+      "id": "card.steady-hand",
+      "nameKey": "card.steady-hand.name",
+      "descriptionKey": "card.steady-hand.description",
+      "iconId": "efficiency",
+      "rarity": "common",
+      "effects": [
+        {
+          "target": "clickFlat",
+          "valuePerLevel": "1"
+        }
+      ]
+    },
+    {
+      "id": "card.dusk-battery",
+      "nameKey": "card.dusk-battery.name",
+      "descriptionKey": "card.dusk-battery.description",
+      "iconId": "efficiency",
+      "rarity": "common",
+      "effects": [
+        {
+          "target": "offlineBonus",
+          "valuePerLevel": "0.02"
+        }
+      ]
+    },
+    {
+      "id": "card.rain-lens",
+      "nameKey": "card.rain-lens.name",
+      "descriptionKey": "card.rain-lens.description",
+      "iconId": "efficiency",
+      "rarity": "common",
+      "effects": [
+        {
+          "target": "rainLifetimeSeconds",
+          "valuePerLevel": "0.3"
+        }
+      ]
+    },
+    {
+      "id": "card.gold-chip",
+      "nameKey": "card.gold-chip.name",
+      "descriptionKey": "card.gold-chip.description",
+      "iconId": "efficiency",
+      "rarity": "common",
+      "effects": [
+        {
+          "target": "goldFlat",
+          "valuePerLevel": "1"
+        }
+      ]
+    },
+    {
+      "id": "card.rainbow-finder",
+      "nameKey": "card.rainbow-finder.name",
+      "descriptionKey": "card.rainbow-finder.description",
+      "iconId": "sparkles",
+      "rarity": "rare",
+      "effects": [
+        {
+          "target": "rainbowWaitReduction",
+          "valuePerLevel": "0.02"
+        }
+      ]
+    },
+    {
+      "id": "card.frenzy-core",
+      "nameKey": "card.frenzy-core.name",
+      "descriptionKey": "card.frenzy-core.description",
+      "iconId": "sparkles",
+      "rarity": "rare",
+      "effects": [
+        {
+          "target": "frenzySeconds",
+          "valuePerLevel": "1"
+        }
+      ]
+    },
+    {
+      "id": "card.rain-cloud",
+      "nameKey": "card.rain-cloud.name",
+      "descriptionKey": "card.rain-cloud.description",
+      "iconId": "sparkles",
+      "rarity": "rare",
+      "effects": [
+        {
+          "target": "rainDurationSeconds",
+          "valuePerLevel": "0.5"
+        },
+        {
+          "target": "rainLifetimeSeconds",
+          "valuePerLevel": "0.4"
+        }
+      ]
+    },
+    {
+      "id": "card.clockwork",
+      "nameKey": "card.clockwork.name",
+      "descriptionKey": "card.clockwork.description",
+      "iconId": "sparkles",
+      "rarity": "rare",
+      "effects": [
+        {
+          "target": "productionPercent",
+          "valuePerLevel": "8"
+        }
+      ]
+    },
+    {
+      "id": "card.star-forge",
+      "nameKey": "card.star-forge.name",
+      "descriptionKey": "card.star-forge.description",
+      "iconId": "star-core",
+      "rarity": "epic",
+      "effects": [
+        {
+          "target": "productionPercent",
+          "valuePerLevel": "12"
+        },
+        {
+          "target": "clickPercent",
+          "valuePerLevel": "8"
+        }
+      ]
+    },
+    {
+      "id": "card.prism-heart",
+      "nameKey": "card.prism-heart.name",
+      "descriptionKey": "card.prism-heart.description",
+      "iconId": "star-core",
+      "rarity": "epic",
+      "effects": [
+        {
+          "target": "clickPercent",
+          "valuePerLevel": "15"
+        },
+        {
+          "target": "frenzySeconds",
+          "valuePerLevel": "1"
+        }
+      ]
+    }
+  ],
+  "cardSynergies": [
+    {
+      "id": "synergy.workshop",
+      "nameKey": "synergy.workshop",
+      "requires": ["card.mint-gear", "card.clockwork"],
+      "effects": [
+        {
+          "target": "productionPercent",
+          "value": "25"
+        }
+      ]
+    },
+    {
+      "id": "synergy.weather",
+      "nameKey": "synergy.weather",
+      "requires": ["card.gold-chip", "card.rain-cloud"],
+      "effects": [
+        {
+          "target": "goldFlat",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "id": "synergy.prismatic",
+      "nameKey": "synergy.prismatic",
+      "requires": ["card.rainbow-finder", "card.frenzy-core"],
+      "effects": [
+        {
+          "target": "frenzySeconds",
+          "value": "5"
+        }
+      ]
+    }
+  ],
+  "cardProgression": {
+    "maxLevel": 10,
+    "upgradeCosts": [
+      {
+        "level": 2,
+        "duplicates": 1,
+        "coin": "100"
+      },
+      {
+        "level": 3,
+        "duplicates": 2,
+        "coin": "500"
+      },
+      {
+        "level": 4,
+        "duplicates": 3,
+        "coin": "2500"
+      },
+      {
+        "level": 5,
+        "duplicates": 4,
+        "coin": "12500"
+      },
+      {
+        "level": 6,
+        "duplicates": 5,
+        "coin": "62500"
+      },
+      {
+        "level": 7,
+        "duplicates": 6,
+        "coin": "312500"
+      },
+      {
+        "level": 8,
+        "duplicates": 8,
+        "coin": "1562500"
+      },
+      {
+        "level": 9,
+        "duplicates": 10,
+        "coin": "7812500"
+      },
+      {
+        "level": 10,
+        "duplicates": 12,
+        "coin": "39062500"
+      }
+    ],
+    "rarityCost": {
+      "common": "1",
+      "rare": "2",
+      "epic": "4"
+    },
+    "maxDuplicateGold": {
+      "common": "1",
+      "rare": "3",
+      "epic": "6"
+    }
+  },
+  "chests": [
+    {
+      "id": "chest.silver",
+      "nameKey": "chest.silver.name",
+      "descriptionKey": "chest.silver.description",
+      "iconId": "efficiency",
+      "keyId": null,
+      "guaranteed": [
+        {
+          "kind": "currency",
+          "currency": "coin",
+          "amount": "500"
+        }
+      ],
+      "draws": [
+        {
+          "tableId": "loot.silver-cards",
+          "count": 1
+        },
+        {
+          "tableId": "loot.silver-extra",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "chest.gold",
+      "nameKey": "chest.gold.name",
+      "descriptionKey": "chest.gold.description",
+      "iconId": "sparkles",
+      "keyId": "key.star",
+      "guaranteed": [
+        {
+          "kind": "currency",
+          "currency": "coin",
+          "amount": "5000"
+        }
+      ],
+      "draws": [
+        {
+          "tableId": "loot.gold-cards",
+          "count": 2
+        },
+        {
+          "tableId": "loot.gold-extra",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "keys": [
+    {
+      "id": "key.star",
+      "nameKey": "key.star.name",
+      "descriptionKey": "key.star.description",
+      "iconId": "star-core"
+    }
+  ],
+  "lootTables": [
+    {
+      "id": "loot.silver-cards",
+      "entries": [
+        {
+          "weight": 12,
+          "reward": {
+            "kind": "card",
+            "cardId": "card.silver-touch",
+            "quantity": 1
+          }
+        },
+        {
+          "weight": 12,
+          "reward": {
+            "kind": "card",
+            "cardId": "card.mint-gear",
+            "quantity": 1
+          }
+        },
+        {
+          "weight": 12,
+          "reward": {
+            "kind": "card",
+            "cardId": "card.steady-hand",
+            "quantity": 1
+          }
+        },
+        {
+          "weight": 12,
+          "reward": {
+            "kind": "card",
+            "cardId": "card.dusk-battery",
+            "quantity": 1
+          }
+        },
+        {
+          "weight": 12,
+          "reward": {
+            "kind": "card",
+            "cardId": "card.rain-lens",
+            "quantity": 1
+          }
+        },
+        {
+          "weight": 12,
+          "reward": {
+            "kind": "card",
+            "cardId": "card.gold-chip",
+            "quantity": 1
+          }
+        },
+        {
+          "weight": 6,
+          "reward": {
+            "kind": "card",
+            "cardId": "card.rainbow-finder",
+            "quantity": 1
+          }
+        },
+        {
+          "weight": 6,
+          "reward": {
+            "kind": "card",
+            "cardId": "card.frenzy-core",
+            "quantity": 1
+          }
+        },
+        {
+          "weight": 6,
+          "reward": {
+            "kind": "card",
+            "cardId": "card.rain-cloud",
+            "quantity": 1
+          }
+        },
+        {
+          "weight": 6,
+          "reward": {
+            "kind": "card",
+            "cardId": "card.clockwork",
+            "quantity": 1
+          }
+        },
+        {
+          "weight": 2,
+          "reward": {
+            "kind": "card",
+            "cardId": "card.star-forge",
+            "quantity": 1
+          }
+        },
+        {
+          "weight": 2,
+          "reward": {
+            "kind": "card",
+            "cardId": "card.prism-heart",
+            "quantity": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "loot.gold-cards",
+      "entries": [
+        {
+          "weight": 5,
+          "reward": {
+            "kind": "card",
+            "cardId": "card.silver-touch",
+            "quantity": 1
+          }
+        },
+        {
+          "weight": 5,
+          "reward": {
+            "kind": "card",
+            "cardId": "card.mint-gear",
+            "quantity": 1
+          }
+        },
+        {
+          "weight": 5,
+          "reward": {
+            "kind": "card",
+            "cardId": "card.steady-hand",
+            "quantity": 1
+          }
+        },
+        {
+          "weight": 5,
+          "reward": {
+            "kind": "card",
+            "cardId": "card.dusk-battery",
+            "quantity": 1
+          }
+        },
+        {
+          "weight": 5,
+          "reward": {
+            "kind": "card",
+            "cardId": "card.rain-lens",
+            "quantity": 1
+          }
+        },
+        {
+          "weight": 5,
+          "reward": {
+            "kind": "card",
+            "cardId": "card.gold-chip",
+            "quantity": 1
+          }
+        },
+        {
+          "weight": 10,
+          "reward": {
+            "kind": "card",
+            "cardId": "card.rainbow-finder",
+            "quantity": 1
+          }
+        },
+        {
+          "weight": 10,
+          "reward": {
+            "kind": "card",
+            "cardId": "card.frenzy-core",
+            "quantity": 1
+          }
+        },
+        {
+          "weight": 10,
+          "reward": {
+            "kind": "card",
+            "cardId": "card.rain-cloud",
+            "quantity": 1
+          }
+        },
+        {
+          "weight": 10,
+          "reward": {
+            "kind": "card",
+            "cardId": "card.clockwork",
+            "quantity": 1
+          }
+        },
+        {
+          "weight": 15,
+          "reward": {
+            "kind": "card",
+            "cardId": "card.star-forge",
+            "quantity": 1
+          }
+        },
+        {
+          "weight": 15,
+          "reward": {
+            "kind": "card",
+            "cardId": "card.prism-heart",
+            "quantity": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "loot.silver-extra",
+      "entries": [
+        {
+          "weight": 40,
+          "reward": {
+            "kind": "item",
+            "itemId": "booster.turbo-mint",
+            "quantity": 1
+          }
+        },
+        {
+          "weight": 40,
+          "reward": {
+            "kind": "item",
+            "itemId": "booster.power-tap",
+            "quantity": 1
+          }
+        },
+        {
+          "weight": 20,
+          "reward": {
+            "kind": "currency",
+            "currency": "goldCoin",
+            "amount": "3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "loot.gold-extra",
+      "entries": [
+        {
+          "weight": 40,
+          "reward": {
+            "kind": "item",
+            "itemId": "booster.golden-magnet",
+            "quantity": 1
+          }
+        },
+        {
+          "weight": 30,
+          "reward": {
+            "kind": "item",
+            "itemId": "booster.time-warp",
+            "quantity": 1
+          }
+        },
+        {
+          "weight": 30,
+          "reward": {
+            "kind": "currency",
+            "currency": "goldCoin",
+            "amount": "5"
+          }
+        }
+      ]
+    }
+  ],
+  "unlocks": {
+    "initialCardSlots": 2,
+    "thirdCardSlotAt": "1000000",
+    "starterChestAt": "1000",
+    "starterChestId": "chest.silver",
+    "maxFrenzySeconds": 60,
+    "maxRainSeconds": 30,
+    "maxRainLifetimeSeconds": 12,
+    "minRainbowWaitMultiplier": "0.5"
+  }
+}

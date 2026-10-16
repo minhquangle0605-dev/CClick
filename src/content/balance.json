@@ -1,0 +1,11 @@
+{
+  "contentVersion": "0.7.0",
+  "longTermMilestone": "1000000000000000",
+  "initialCoin": "0",
+  "initialGold": "0",
+  "baseClick": "1",
+  "milestoneCoin": "1000",
+  "autosaveSeconds": 10,
+  "offlineCapSeconds": 86400,
+  "offlineEfficiency": "0.5"
+}

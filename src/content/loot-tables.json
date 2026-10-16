@@ -1,0 +1,262 @@
+[
+  {
+    "id": "loot.silver-cards",
+    "entries": [
+      {
+        "weight": 12,
+        "reward": {
+          "kind": "card",
+          "cardId": "card.silver-touch",
+          "quantity": 1
+        }
+      },
+      {
+        "weight": 12,
+        "reward": {
+          "kind": "card",
+          "cardId": "card.mint-gear",
+          "quantity": 1
+        }
+      },
+      {
+        "weight": 12,
+        "reward": {
+          "kind": "card",
+          "cardId": "card.steady-hand",
+          "quantity": 1
+        }
+      },
+      {
+        "weight": 12,
+        "reward": {
+          "kind": "card",
+          "cardId": "card.dusk-battery",
+          "quantity": 1
+        }
+      },
+      {
+        "weight": 12,
+        "reward": {
+          "kind": "card",
+          "cardId": "card.rain-lens",
+          "quantity": 1
+        }
+      },
+      {
+        "weight": 12,
+        "reward": {
+          "kind": "card",
+          "cardId": "card.gold-chip",
+          "quantity": 1
+        }
+      },
+      {
+        "weight": 6,
+        "reward": {
+          "kind": "card",
+          "cardId": "card.rainbow-finder",
+          "quantity": 1
+        }
+      },
+      {
+        "weight": 6,
+        "reward": {
+          "kind": "card",
+          "cardId": "card.frenzy-core",
+          "quantity": 1
+        }
+      },
+      {
+        "weight": 6,
+        "reward": {
+          "kind": "card",
+          "cardId": "card.rain-cloud",
+          "quantity": 1
+        }
+      },
+      {
+        "weight": 6,
+        "reward": {
+          "kind": "card",
+          "cardId": "card.clockwork",
+          "quantity": 1
+        }
+      },
+      {
+        "weight": 2,
+        "reward": {
+          "kind": "card",
+          "cardId": "card.star-forge",
+          "quantity": 1
+        }
+      },
+      {
+        "weight": 2,
+        "reward": {
+          "kind": "card",
+          "cardId": "card.prism-heart",
+          "quantity": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "loot.gold-cards",
+    "entries": [
+      {
+        "weight": 5,
+        "reward": {
+          "kind": "card",
+          "cardId": "card.silver-touch",
+          "quantity": 1
+        }
+      },
+      {
+        "weight": 5,
+        "reward": {
+          "kind": "card",
+          "cardId": "card.mint-gear",
+          "quantity": 1
+        }
+      },
+      {
+        "weight": 5,
+        "reward": {
+          "kind": "card",
+          "cardId": "card.steady-hand",
+          "quantity": 1
+        }
+      },
+      {
+        "weight": 5,
+        "reward": {
+          "kind": "card",
+          "cardId": "card.dusk-battery",
+          "quantity": 1
+        }
+      },
+      {
+        "weight": 5,
+        "reward": {
+          "kind": "card",
+          "cardId": "card.rain-lens",
+          "quantity": 1
+        }
+      },
+      {
+        "weight": 5,
+        "reward": {
+          "kind": "card",
+          "cardId": "card.gold-chip",
+          "quantity": 1
+        }
+      },
+      {
+        "weight": 10,
+        "reward": {
+          "kind": "card",
+          "cardId": "card.rainbow-finder",
+          "quantity": 1
+        }
+      },
+      {
+        "weight": 10,
+        "reward": {
+          "kind": "card",
+          "cardId": "card.frenzy-core",
+          "quantity": 1
+        }
+      },
+      {
+        "weight": 10,
+        "reward": {
+          "kind": "card",
+          "cardId": "card.rain-cloud",
+          "quantity": 1
+        }
+      },
+      {
+        "weight": 10,
+        "reward": {
+          "kind": "card",
+          "cardId": "card.clockwork",
+          "quantity": 1
+        }
+      },
+      {
+        "weight": 15,
+        "reward": {
+          "kind": "card",
+          "cardId": "card.star-forge",
+          "quantity": 1
+        }
+      },
+      {
+        "weight": 15,
+        "reward": {
+          "kind": "card",
+          "cardId": "card.prism-heart",
+          "quantity": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "loot.silver-extra",
+    "entries": [
+      {
+        "weight": 40,
+        "reward": {
+          "kind": "item",
+          "itemId": "booster.turbo-mint",
+          "quantity": 1
+        }
+      },
+      {
+        "weight": 40,
+        "reward": {
+          "kind": "item",
+          "itemId": "booster.power-tap",
+          "quantity": 1
+        }
+      },
+      {
+        "weight": 20,
+        "reward": {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "3"
+        }
+      }
+    ]
+  },
+  {
+    "id": "loot.gold-extra",
+    "entries": [
+      {
+        "weight": 40,
+        "reward": {
+          "kind": "item",
+          "itemId": "booster.golden-magnet",
+          "quantity": 1
+        }
+      },
+      {
+        "weight": 30,
+        "reward": {
+          "kind": "item",
+          "itemId": "booster.time-warp",
+          "quantity": 1
+        }
+      },
+      {
+        "weight": 30,
+        "reward": {
+          "kind": "currency",
+          "currency": "goldCoin",
+          "amount": "5"
+        }
+      }
+    ]
+  }
+]

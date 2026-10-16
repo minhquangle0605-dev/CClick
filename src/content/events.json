@@ -1,0 +1,23 @@
+{
+  "temporaryCap": "20",
+  "rain": {
+    "waitMinSeconds": 180,
+    "waitMaxSeconds": 300,
+    "durationSeconds": 15,
+    "count": 10,
+    "spawnEverySeconds": 1,
+    "coinLifetimeSeconds": 6,
+    "goldPerCoin": "1"
+  },
+  "rainbow": {
+    "unlockAt": "10000",
+    "waitMinSeconds": 600,
+    "waitMaxSeconds": 900,
+    "lifetimeSeconds": 8,
+    "frenzySeconds": 20,
+    "maxFrenzySeconds": 40,
+    "productionMultiplier": "3",
+    "clickMultiplier": "3",
+    "goldMultiplier": "2"
+  }
+}

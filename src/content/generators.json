@@ -1,0 +1,122 @@
+[
+  {
+    "id": "generator.hand-press",
+    "nameKey": "generator.hand-press.name",
+    "descriptionKey": "generator.hand-press.description",
+    "iconId": "hand-press",
+    "basePrice": "15",
+    "baseCps": "0.1",
+    "priceGrowth": "1.15",
+    "unlockAt": "0"
+  },
+  {
+    "id": "generator.auto-press",
+    "nameKey": "generator.auto-press.name",
+    "descriptionKey": "generator.auto-press.description",
+    "iconId": "auto-press",
+    "basePrice": "100",
+    "baseCps": "1",
+    "priceGrowth": "1.15",
+    "unlockAt": "15"
+  },
+  {
+    "id": "generator.mint-workshop",
+    "nameKey": "generator.mint-workshop.name",
+    "descriptionKey": "generator.mint-workshop.description",
+    "iconId": "workshop",
+    "basePrice": "1100",
+    "baseCps": "8",
+    "priceGrowth": "1.15",
+    "unlockAt": "100"
+  },
+  {
+    "id": "generator.mint-factory",
+    "nameKey": "generator.mint-factory.name",
+    "descriptionKey": "generator.mint-factory.description",
+    "iconId": "factory",
+    "basePrice": "12000",
+    "baseCps": "47",
+    "priceGrowth": "1.15",
+    "unlockAt": "1100"
+  },
+  {
+    "id": "generator.plasma-forge",
+    "nameKey": "generator.plasma-forge.name",
+    "descriptionKey": "generator.plasma-forge.description",
+    "iconId": "plasma",
+    "basePrice": "130000",
+    "baseCps": "260",
+    "priceGrowth": "1.15",
+    "unlockAt": "12000"
+  },
+  {
+    "id": "generator.star-core",
+    "nameKey": "generator.star-core.name",
+    "descriptionKey": "generator.star-core.description",
+    "iconId": "star-core",
+    "basePrice": "1400000",
+    "baseCps": "1400",
+    "priceGrowth": "1.15",
+    "unlockAt": "130000"
+  },
+  {
+    "id": "generator.orbital-mint",
+    "nameKey": "generator.orbital-mint.name",
+    "descriptionKey": "generator.orbital-mint.description",
+    "iconId": "star-core",
+    "basePrice": "20000000",
+    "baseCps": "2000",
+    "priceGrowth": "1.15",
+    "unlockAt": "1400000"
+  },
+  {
+    "id": "generator.lunar-array",
+    "nameKey": "generator.lunar-array.name",
+    "descriptionKey": "generator.lunar-array.description",
+    "iconId": "factory",
+    "basePrice": "330000000",
+    "baseCps": "11000",
+    "priceGrowth": "1.15",
+    "unlockAt": "20000000"
+  },
+  {
+    "id": "generator.quantum-vault",
+    "nameKey": "generator.quantum-vault.name",
+    "descriptionKey": "generator.quantum-vault.description",
+    "iconId": "plasma",
+    "basePrice": "5100000000",
+    "baseCps": "65000",
+    "priceGrowth": "1.15",
+    "unlockAt": "330000000"
+  },
+  {
+    "id": "generator.stellar-network",
+    "nameKey": "generator.stellar-network.name",
+    "descriptionKey": "generator.stellar-network.description",
+    "iconId": "star-core",
+    "basePrice": "75000000000",
+    "baseCps": "400000",
+    "priceGrowth": "1.15",
+    "unlockAt": "5100000000"
+  },
+  {
+    "id": "generator.galactic-engine",
+    "nameKey": "generator.galactic-engine.name",
+    "descriptionKey": "generator.galactic-engine.description",
+    "iconId": "factory",
+    "basePrice": "1000000000000",
+    "baseCps": "2500000",
+    "priceGrowth": "1.15",
+    "unlockAt": "75000000000"
+  },
+  {
+    "id": "generator.infinity-foundry",
+    "nameKey": "generator.infinity-foundry.name",
+    "descriptionKey": "generator.infinity-foundry.description",
+    "iconId": "plasma",
+    "basePrice": "14000000000000",
+    "baseCps": "16250000",
+    "priceGrowth": "1.15",
+    "unlockAt": "1000000000000"
+  }
+]

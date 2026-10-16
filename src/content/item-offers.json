@@ -1,0 +1,9 @@
+[
+  { "id": "offer.silver-chest", "itemId": "chest.silver", "goldPrice": "20" },
+  { "id": "offer.gold-chest", "itemId": "chest.gold", "goldPrice": "50" },
+  { "id": "offer.star-key", "itemId": "key.star", "goldPrice": "15" },
+  { "id": "offer.turbo-mint", "itemId": "booster.turbo-mint", "goldPrice": "10" },
+  { "id": "offer.power-tap", "itemId": "booster.power-tap", "goldPrice": "10" },
+  { "id": "offer.golden-magnet", "itemId": "booster.golden-magnet", "goldPrice": "15" },
+  { "id": "offer.time-warp", "itemId": "booster.time-warp", "goldPrice": "40" }
+]

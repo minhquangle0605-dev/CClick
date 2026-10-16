@@ -1,0 +1,51 @@
+{
+  "appVersion": "1.0.0-rc.1",
+  "contentVersion": "0.6.0",
+  "environment": {
+    "node": "v24.14.0",
+    "platform": "win32",
+    "osRelease": "10.0.26200",
+    "cpu": "12th Gen Intel(R) Core(TM) i7-12700H",
+    "gcAvailable": true
+  },
+  "simulatedHours": 2,
+  "runtimeSeconds": 37.944458,
+  "tickAndOptionalClick": {
+    "count": 72000,
+    "p50Ms": 0.3168000000005122,
+    "p95Ms": 0.7744000000002416,
+    "maxMs": 6.979499999999462
+  },
+  "shop42Quotes": {
+    "count": 721,
+    "p50Ms": 9.95890000000145,
+    "p95Ms": 19.761599999999817,
+    "maxMs": 81.46179999999998
+  },
+  "memory": [
+    {
+      "simulatedMinutes": 0,
+      "heapUsedBytes": 16148176
+    },
+    {
+      "simulatedMinutes": 30,
+      "heapUsedBytes": 17035640
+    },
+    {
+      "simulatedMinutes": 60,
+      "heapUsedBytes": 17331488
+    },
+    {
+      "simulatedMinutes": 90,
+      "heapUsedBytes": 17598760
+    },
+    {
+      "simulatedMinutes": 120,
+      "heapUsedBytes": 17641824
+    }
+  ],
+  "maxObjects": 10,
+  "maxEffects": 0,
+  "maxSaveBytes": 4610,
+  "note": "Accelerated Node engine workload, not browser FPS, rendering latency, real two-hour play or browser memory."
+}

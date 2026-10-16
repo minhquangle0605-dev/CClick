@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": "0.1.0",
+  "appVersion": "0.2.0",
+  "savedAtUtc": "2026-10-14T00:00:00.000Z",
+  "payload": {
+    "runId": "fixture-v1",
+    "revision": 100,
+    "wallet": {
+      "coin": "100",
+      "goldCoin": "0"
+    },
+    "generators": {},
+    "purchasedUpgradeIds": [],
+    "statistics": {
+      "clicks": 100,
+      "totalProducedCoin": "100",
+      "totalSpentCoin": "0"
+    },
+    "lastSimulatedAtUtc": "2026-10-14T00:00:00.000Z"
+  },
+  "checksum": "9e4924e9bc6afd542a368b9a734471d2067b1b19ef9cbe89b74cc32d0be48998"
+}

@@ -1,0 +1,10 @@
+{
+  "initialCardSlots": 2,
+  "thirdCardSlotAt": "1000000",
+  "starterChestAt": "1000",
+  "starterChestId": "chest.silver",
+  "maxFrenzySeconds": 60,
+  "maxRainSeconds": 30,
+  "maxRainLifetimeSeconds": 12,
+  "minRainbowWaitMultiplier": "0.5"
+}

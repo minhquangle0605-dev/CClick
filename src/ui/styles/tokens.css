@@ -1,0 +1,21 @@
+:root {
+  color-scheme: dark;
+  --font: 'Manrope Variable', 'Segoe UI', sans-serif;
+  --background: #0a1020;
+  --surface: #101b2c;
+  --text: #e4edfa;
+  --muted: #879ab5;
+  --accent: #a4c7f6;
+  --gold: #d8ba84;
+  --border: #9dbbe615;
+  --border-bright: #9dbbe62e;
+  --radius: 18px;
+  font-family: var(--font);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  color: var(--text);
+  background: var(--background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}

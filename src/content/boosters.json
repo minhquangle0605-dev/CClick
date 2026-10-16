@@ -1,0 +1,42 @@
+[
+  {
+    "id": "booster.turbo-mint",
+    "nameKey": "booster.turbo.name",
+    "descriptionKey": "booster.turbo.description",
+    "iconId": "zap",
+    "durationSeconds": 60,
+    "maxDurationSeconds": 86400,
+    "warpSeconds": 0,
+    "effects": [{ "target": "production", "value": "2", "stackGroup": "booster-production" }]
+  },
+  {
+    "id": "booster.power-tap",
+    "nameKey": "booster.power.name",
+    "descriptionKey": "booster.power.description",
+    "iconId": "cursor",
+    "durationSeconds": 30,
+    "maxDurationSeconds": 86400,
+    "warpSeconds": 0,
+    "effects": [{ "target": "click", "value": "3", "stackGroup": "booster-click" }]
+  },
+  {
+    "id": "booster.golden-magnet",
+    "nameKey": "booster.magnet.name",
+    "descriptionKey": "booster.magnet.description",
+    "iconId": "sparkles",
+    "durationSeconds": 30,
+    "maxDurationSeconds": 86400,
+    "warpSeconds": 0,
+    "effects": [{ "target": "magnet", "value": "2", "stackGroup": "magnet" }]
+  },
+  {
+    "id": "booster.time-warp",
+    "nameKey": "booster.warp.name",
+    "descriptionKey": "booster.warp.description",
+    "iconId": "clock",
+    "durationSeconds": 0,
+    "maxDurationSeconds": 0,
+    "warpSeconds": 3600,
+    "effects": []
+  }
+]

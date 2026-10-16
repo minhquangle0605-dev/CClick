@@ -1,0 +1,59 @@
+{
+  "contentVersion": "0.6.0",
+  "chests": [
+    {
+      "id": "chest.silver",
+      "goldCostWithKey": "20",
+      "maximumGoldAtMaxCards": "9",
+      "minimumNetGoldCost": "11"
+    },
+    {
+      "id": "chest.gold",
+      "goldCostWithKey": "65",
+      "maximumGoldAtMaxCards": "17",
+      "minimumNetGoldCost": "48"
+    }
+  ],
+  "items": [
+    {
+      "id": "booster.turbo-mint",
+      "sources": ["shop", "daily", "loot"],
+      "use": "temporary effect or time warp"
+    },
+    {
+      "id": "booster.power-tap",
+      "sources": ["shop", "daily", "loot"],
+      "use": "temporary effect or time warp"
+    },
+    {
+      "id": "booster.golden-magnet",
+      "sources": ["shop", "loot"],
+      "use": "temporary effect or time warp"
+    },
+    {
+      "id": "booster.time-warp",
+      "sources": ["shop", "daily", "loot"],
+      "use": "temporary effect or time warp"
+    },
+    {
+      "id": "chest.silver",
+      "sources": ["shop", "daily", "achievement", "milestone"],
+      "use": "collection and rewards"
+    },
+    {
+      "id": "chest.gold",
+      "sources": ["shop", "daily", "achievement"],
+      "use": "collection and rewards"
+    },
+    {
+      "id": "key.star",
+      "sources": ["shop", "daily", "achievement"],
+      "use": "open chest"
+    }
+  ],
+  "limits": [
+    "Only direct Gold cashback and chest/key recursion are bounded here.",
+    "Rain, daily and production intentionally renew over time; there is no sale-back market.",
+    "Time Warp costs inventory and does not advance event/daily clocks; booster stacking has caps."
+  ]
+}

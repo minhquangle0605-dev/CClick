@@ -1,0 +1,138 @@
+.ambient-background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  contain: strict;
+  background: #071325;
+}
+.ambient-scene {
+  position: absolute;
+  inset: -3%;
+  width: 106%;
+  height: 106%;
+  object-fit: cover;
+  opacity: 0.62;
+  animation: ambient-drift 38s ease-in-out infinite alternate;
+  will-change: transform;
+}
+.ambient-depth,
+.ambient-rays,
+.ambient-dust,
+.ambient-coins,
+.ambient-veil {
+  position: absolute;
+  inset: 0;
+}
+.ambient-depth {
+  background: radial-gradient(ellipse at 38% 46%, #071325c7 0%, #07132570 42%, #07132515 80%);
+}
+.ambient-rays {
+  inset: -8%;
+  opacity: 0.2;
+  background: conic-gradient(
+    from 166deg at 48% -12%,
+    transparent 0deg 8deg,
+    #b9e5ff45 10deg,
+    transparent 13deg 24deg,
+    #83cfff2e 28deg,
+    transparent 32deg 44deg,
+    #b9e5ff38 47deg,
+    transparent 51deg
+  );
+  animation: ambient-light 16s ease-in-out infinite alternate;
+}
+.ambient-dust {
+  inset: -24px;
+  opacity: 0.35;
+  background-image:
+    radial-gradient(circle at 15% 23%, #b9e5ffb3 0 1px, transparent 2px),
+    radial-gradient(circle at 67% 71%, #dcefff80 0 1px, transparent 2px),
+    radial-gradient(circle at 39% 46%, #9aceff80 0 1px, transparent 2px);
+  background-size:
+    211px 187px,
+    307px 257px,
+    401px 317px;
+  animation: ambient-dust-drift 20s ease-in-out infinite alternate;
+}
+.ambient-coin {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: clamp(32px, 9vw, var(--size));
+  opacity: 0.26;
+  animation: ambient-coin-float var(--duration) ease-in-out var(--delay) infinite alternate;
+}
+.ambient-coin img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: rotate(var(--tilt)) scaleX(0.76);
+}
+.ambient-veil {
+  background:
+    linear-gradient(#060e1ee6, transparent 24% 78%, #060e1ee6),
+    linear-gradient(90deg, #060e1e1a, #060e1e26 52%, #060e1e8c);
+}
+/* Only transforms and opacity move; no layout, filters, or JS frame loop. */
+@keyframes ambient-drift {
+  from {
+    transform: translate3d(-1%, -0.6%, 0) scale(1);
+  }
+  to {
+    transform: translate3d(1%, 0.6%, 0) scale(1.035);
+  }
+}
+@keyframes ambient-light {
+  from {
+    transform: translate3d(-2%, 0, 0) rotate(-3deg);
+    opacity: 0.12;
+  }
+  to {
+    transform: translate3d(2%, 0, 0) rotate(3deg);
+    opacity: 0.24;
+  }
+}
+@keyframes ambient-dust-drift {
+  from {
+    transform: translate3d(-8px, 16px, 0);
+    opacity: 0.2;
+  }
+  to {
+    transform: translate3d(8px, -16px, 0);
+    opacity: 0.4;
+  }
+}
+@keyframes ambient-coin-float {
+  from {
+    transform: translate3d(-12px, 22px, 0) rotate(-8deg);
+  }
+  to {
+    transform: translate3d(12px, -22px, 0) rotate(8deg);
+  }
+}
+.ambient-background[data-paused='true'] * {
+  animation-play-state: paused !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ambient-background * {
+    animation-play-state: paused !important;
+  }
+}
+@media (max-width: 900px) {
+  .ambient-coin:nth-child(n + 4) {
+    display: none;
+  }
+  .ambient-rays {
+    display: none;
+  }
+  .ambient-scene {
+    opacity: 0.48;
+    object-position: 35% center;
+  }
+  .ambient-depth {
+    background: #0713254d;
+  }
+}

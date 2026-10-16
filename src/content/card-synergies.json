@@ -1,0 +1,35 @@
+[
+  {
+    "id": "synergy.workshop",
+    "nameKey": "synergy.workshop",
+    "requires": ["card.mint-gear", "card.clockwork"],
+    "effects": [
+      {
+        "target": "productionPercent",
+        "value": "25"
+      }
+    ]
+  },
+  {
+    "id": "synergy.weather",
+    "nameKey": "synergy.weather",
+    "requires": ["card.gold-chip", "card.rain-cloud"],
+    "effects": [
+      {
+        "target": "goldFlat",
+        "value": "1"
+      }
+    ]
+  },
+  {
+    "id": "synergy.prismatic",
+    "nameKey": "synergy.prismatic",
+    "requires": ["card.rainbow-finder", "card.frenzy-core"],
+    "effects": [
+      {
+        "target": "frenzySeconds",
+        "value": "5"
+      }
+    ]
+  }
+]

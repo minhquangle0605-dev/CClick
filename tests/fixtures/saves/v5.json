@@ -1,0 +1,139 @@
+{
+  "contentVersion": "0.5.0",
+  "appVersion": "0.6.0",
+  "savedAtUtc": "2026-10-14T00:00:00.000Z",
+  "checksum": "858dfe965bac954df99c22b111a05b73b6cdcb71194bb19d6d227c8f1d80efbe",
+  "schemaVersion": 5,
+  "payload": {
+    "runId": "test-run",
+    "revision": 15,
+    "wallet": {
+      "coin": "1005010",
+      "goldCoin": "85"
+    },
+    "generators": {
+      "generator.auto-press": 1
+    },
+    "purchasedUpgradeIds": [],
+    "statistics": {
+      "clicks": 10,
+      "totalProducedCoin": "1000010",
+      "totalSpentCoin": "0",
+      "totalGiftCoin": "5000"
+    },
+    "lastSimulatedAtUtc": "2026-10-14T00:00:00.000Z",
+    "offlineCps": "1.57",
+    "inventory": {
+      "chest.gold": 1,
+      "key.star": 1,
+      "booster.turbo-mint": 1
+    },
+    "effectsAtMs": 1791936000000,
+    "effects": [],
+    "events": {
+      "activeMs": 0,
+      "rng": 2968950144,
+      "sequence": 0,
+      "nextRainAt": 210192,
+      "rainEndsAt": null,
+      "nextRainbowAt": 807379,
+      "rainbowUnlocked": true,
+      "objects": []
+    },
+    "offlineEfficiency": "0.5",
+    "cards": {
+      "owned": {
+        "card.mint-gear": {
+          "level": 2,
+          "duplicates": 4,
+          "convertedGold": "0"
+        },
+        "card.clockwork": {
+          "level": 3,
+          "duplicates": 0,
+          "convertedGold": "0"
+        },
+        "card.prism-heart": {
+          "level": 10,
+          "duplicates": 0,
+          "convertedGold": "6"
+        },
+        "card.rainbow-finder": {
+          "level": 1,
+          "duplicates": 0,
+          "convertedGold": "0"
+        }
+      },
+      "equipped": ["card.mint-gear", "card.clockwork"]
+    },
+    "chests": {
+      "rng": 4115954825,
+      "opened": 1,
+      "starterClaimed": true,
+      "acknowledged": false,
+      "lastResult": {
+        "id": 1,
+        "chestId": "chest.gold",
+        "openedAtUtc": "2026-10-14T00:00:00.000Z",
+        "rewards": [
+          {
+            "kind": "currency",
+            "currency": "coin",
+            "amount": "5000"
+          },
+          {
+            "kind": "card",
+            "cardId": "card.mint-gear",
+            "quantity": 1,
+            "note": "duplicate"
+          },
+          {
+            "kind": "card",
+            "cardId": "card.rainbow-finder",
+            "quantity": 1,
+            "note": "new"
+          },
+          {
+            "kind": "currency",
+            "currency": "goldCoin",
+            "amount": "5"
+          }
+        ]
+      }
+    },
+    "daily": {
+      "claimCount": 1,
+      "lastClaimDay": 20740,
+      "highestDay": 20740
+    },
+    "achievements": {
+      "unlockedIds": [
+        "achievement.production-1",
+        "achievement.production-2",
+        "achievement.production-3",
+        "achievement.machines-1",
+        "achievement.collection-1",
+        "achievement.chests-1",
+        "achievement.click-1",
+        "achievement.daily-1"
+      ],
+      "claimedIds": ["achievement.click-1"]
+    },
+    "tracking": {
+      "coin": {
+        "click": "10",
+        "production": "0",
+        "offline": "0",
+        "timeWarp": "0",
+        "chest": "0",
+        "daily": "0",
+        "achievement": "0"
+      },
+      "goldFromEvents": "0",
+      "eventCoins": 0,
+      "rainbows": 0,
+      "boostersUsed": 0,
+      "activeMs": 0
+    }
+  }
+}

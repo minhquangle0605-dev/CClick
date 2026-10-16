@@ -1,0 +1,60 @@
+{
+  "maxLevel": 10,
+  "upgradeCosts": [
+    {
+      "level": 2,
+      "duplicates": 1,
+      "coin": "100"
+    },
+    {
+      "level": 3,
+      "duplicates": 2,
+      "coin": "500"
+    },
+    {
+      "level": 4,
+      "duplicates": 3,
+      "coin": "2500"
+    },
+    {
+      "level": 5,
+      "duplicates": 4,
+      "coin": "12500"
+    },
+    {
+      "level": 6,
+      "duplicates": 5,
+      "coin": "62500"
+    },
+    {
+      "level": 7,
+      "duplicates": 6,
+      "coin": "312500"
+    },
+    {
+      "level": 8,
+      "duplicates": 8,
+      "coin": "1562500"
+    },
+    {
+      "level": 9,
+      "duplicates": 10,
+      "coin": "7812500"
+    },
+    {
+      "level": 10,
+      "duplicates": 12,
+      "coin": "39062500"
+    }
+  ],
+  "rarityCost": {
+    "common": "1",
+    "rare": "2",
+    "epic": "4"
+  },
+  "maxDuplicateGold": {
+    "common": "1",
+    "rare": "3",
+    "epic": "6"
+  }
+}

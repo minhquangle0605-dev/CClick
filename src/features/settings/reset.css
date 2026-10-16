@@ -1,0 +1,40 @@
+.reset-panel {
+  font-size: 13px;
+  line-height: 1.9;
+}
+.reset-panel dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.reset-panel dd {
+  text-align: right;
+  margin: 0;
+}
+.reset-label {
+  display: grid;
+  gap: 8px;
+  margin: 24px 0 16px;
+}
+.reset-label input {
+  border: 1px solid #b98585;
+  border-radius: 8px;
+  background: #162338;
+  color: white;
+  padding: 12px;
+  font: inherit;
+}
+.danger-button {
+  padding: 12px 16px;
+  border: 1px solid #d58282;
+  background: #5c3039;
+  border-radius: 8px;
+  color: #ffe1df;
+  cursor: pointer;
+}
+.danger-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.reset-entry {
+  margin-top: 22px;
+}

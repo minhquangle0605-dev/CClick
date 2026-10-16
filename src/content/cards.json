@@ -1,0 +1,170 @@
+[
+  {
+    "id": "card.silver-touch",
+    "nameKey": "card.silver-touch.name",
+    "descriptionKey": "card.silver-touch.description",
+    "iconId": "efficiency",
+    "rarity": "common",
+    "effects": [
+      {
+        "target": "clickPercent",
+        "valuePerLevel": "5"
+      }
+    ]
+  },
+  {
+    "id": "card.mint-gear",
+    "nameKey": "card.mint-gear.name",
+    "descriptionKey": "card.mint-gear.description",
+    "iconId": "efficiency",
+    "rarity": "common",
+    "effects": [
+      {
+        "target": "productionPercent",
+        "valuePerLevel": "4"
+      }
+    ]
+  },
+  {
+    "id": "card.steady-hand",
+    "nameKey": "card.steady-hand.name",
+    "descriptionKey": "card.steady-hand.description",
+    "iconId": "efficiency",
+    "rarity": "common",
+    "effects": [
+      {
+        "target": "clickFlat",
+        "valuePerLevel": "1"
+      }
+    ]
+  },
+  {
+    "id": "card.dusk-battery",
+    "nameKey": "card.dusk-battery.name",
+    "descriptionKey": "card.dusk-battery.description",
+    "iconId": "efficiency",
+    "rarity": "common",
+    "effects": [
+      {
+        "target": "offlineBonus",
+        "valuePerLevel": "0.02"
+      }
+    ]
+  },
+  {
+    "id": "card.rain-lens",
+    "nameKey": "card.rain-lens.name",
+    "descriptionKey": "card.rain-lens.description",
+    "iconId": "efficiency",
+    "rarity": "common",
+    "effects": [
+      {
+        "target": "rainLifetimeSeconds",
+        "valuePerLevel": "0.3"
+      }
+    ]
+  },
+  {
+    "id": "card.gold-chip",
+    "nameKey": "card.gold-chip.name",
+    "descriptionKey": "card.gold-chip.description",
+    "iconId": "efficiency",
+    "rarity": "common",
+    "effects": [
+      {
+        "target": "goldFlat",
+        "valuePerLevel": "1"
+      }
+    ]
+  },
+  {
+    "id": "card.rainbow-finder",
+    "nameKey": "card.rainbow-finder.name",
+    "descriptionKey": "card.rainbow-finder.description",
+    "iconId": "sparkles",
+    "rarity": "rare",
+    "effects": [
+      {
+        "target": "rainbowWaitReduction",
+        "valuePerLevel": "0.02"
+      }
+    ]
+  },
+  {
+    "id": "card.frenzy-core",
+    "nameKey": "card.frenzy-core.name",
+    "descriptionKey": "card.frenzy-core.description",
+    "iconId": "sparkles",
+    "rarity": "rare",
+    "effects": [
+      {
+        "target": "frenzySeconds",
+        "valuePerLevel": "1"
+      }
+    ]
+  },
+  {
+    "id": "card.rain-cloud",
+    "nameKey": "card.rain-cloud.name",
+    "descriptionKey": "card.rain-cloud.description",
+    "iconId": "sparkles",
+    "rarity": "rare",
+    "effects": [
+      {
+        "target": "rainDurationSeconds",
+        "valuePerLevel": "0.5"
+      },
+      {
+        "target": "rainLifetimeSeconds",
+        "valuePerLevel": "0.4"
+      }
+    ]
+  },
+  {
+    "id": "card.clockwork",
+    "nameKey": "card.clockwork.name",
+    "descriptionKey": "card.clockwork.description",
+    "iconId": "sparkles",
+    "rarity": "rare",
+    "effects": [
+      {
+        "target": "productionPercent",
+        "valuePerLevel": "8"
+      }
+    ]
+  },
+  {
+    "id": "card.star-forge",
+    "nameKey": "card.star-forge.name",
+    "descriptionKey": "card.star-forge.description",
+    "iconId": "star-core",
+    "rarity": "epic",
+    "effects": [
+      {
+        "target": "productionPercent",
+        "valuePerLevel": "12"
+      },
+      {
+        "target": "clickPercent",
+        "valuePerLevel": "8"
+      }
+    ]
+  },
+  {
+    "id": "card.prism-heart",
+    "nameKey": "card.prism-heart.name",
+    "descriptionKey": "card.prism-heart.description",
+    "iconId": "star-core",
+    "rarity": "epic",
+    "effects": [
+      {
+        "target": "clickPercent",
+        "valuePerLevel": "15"
+      },
+      {
+        "target": "frenzySeconds",
+        "valuePerLevel": "1"
+      }
+    ]
+  }
+]

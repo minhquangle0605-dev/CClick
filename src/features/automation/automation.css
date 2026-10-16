@@ -1,0 +1,79 @@
+.automation-control {
+  padding: 10px;
+  border: 1px solid #93b4e430;
+  border-radius: 12px;
+  background: #13243a;
+}
+.auto-upgrade-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 10px;
+  background: #20344e;
+  border: 1px solid #8eb6de40;
+  border-radius: 8px;
+  color: #dcecff;
+  font-size: 12px;
+  cursor: pointer;
+}
+.auto-upgrade-toggle[aria-pressed='true'] {
+  background: #1c493e;
+  border-color: #8bd9ba70;
+  color: #d9fff0;
+}
+.auto-upgrade-toggle:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+.auto-switch {
+  width: 28px;
+  height: 16px;
+  padding: 2px;
+  margin-left: auto;
+  background: #74869e;
+  border-radius: 10px;
+}
+.auto-switch::after {
+  content: '';
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+}
+[aria-pressed='true'] .auto-switch {
+  background: #64b599;
+}
+[aria-pressed='true'] .auto-switch::after {
+  margin-left: auto;
+}
+.automation-control details {
+  margin-top: 8px;
+  color: #a9bdd5;
+  font-size: 11px;
+  line-height: 1.7;
+}
+.automation-control summary {
+  cursor: pointer;
+}
+.automation-control p {
+  margin: 8px 0 0;
+}
+.auto-last-action {
+  color: #a5d7c6;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.auto-plan {
+  color: #bdd4ee;
+  font-size: 11px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.always-auto-status {
+  color: #a5d7c6;
+  font-size: 11px;
+  padding: 0 8px;
+}

@@ -1,0 +1,58 @@
+.achievements-panel > p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+.achievement-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.achievement-list article {
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #18283e;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.achievement-list .achievement-ready {
+  border-color: #b5d6a96b;
+  background: linear-gradient(145deg, #254234, #18283e);
+}
+.achievement-heading {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  color: #e8cf9d;
+}
+.achievement-heading h3 {
+  font-size: 14px;
+  margin: 0;
+}
+.achievement-list p {
+  margin: 0;
+  line-height: 1.7;
+  color: #aebfd7;
+}
+.achievement-list ul {
+  padding-left: 18px;
+  line-height: 1.7;
+  margin: 0;
+  flex: 1;
+}
+.achievement-list progress {
+  width: 100%;
+  height: 8px;
+  accent-color: #a6cbed;
+}
+.achievement-list button {
+  font-size: 11px;
+  min-height: 44px;
+}
+@media (max-width: 500px) {
+  .achievement-list {
+    grid-template-columns: 1fr;
+  }
+}

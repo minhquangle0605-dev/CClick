@@ -1,0 +1,7 @@
+.gold-artwork {
+  display: inline-block;
+  object-fit: contain;
+  flex-shrink: 0;
+  vertical-align: middle;
+  pointer-events: none;
+}

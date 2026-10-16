@@ -1,0 +1,120 @@
+.boosters-panel .info-note {
+  margin-top: 0;
+}
+.booster-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.booster-card {
+  display: grid;
+  gap: 10px;
+  text-align: left;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  background: #17273c;
+  color: #d9e8fc;
+  cursor: pointer;
+}
+.booster-card[aria-pressed='true'] {
+  border-color: #a9caff;
+  background: #263d59;
+}
+.booster-card strong {
+  font-size: 13px;
+}
+.booster-card span {
+  font-size: 11px;
+  color: #d1b27a;
+}
+.booster-card small {
+  font-size: 11px;
+  color: #9caec7;
+  line-height: 1.7;
+}
+.booster-preview {
+  margin-top: 18px;
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+}
+.booster-preview h3 {
+  font-size: 14px;
+}
+.booster-preview p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+.action-message {
+  font-size: 12px;
+  line-height: 1.7;
+  color: #bed8f2;
+  min-height: 20px;
+}
+.effects-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 16px 0;
+  min-height: 32px;
+}
+.effect-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid #a8cfff30;
+  background: #263e5666;
+  border-radius: 20px;
+  padding: 8px 12px;
+  font-size: 11px;
+  color: #c5dff8;
+  font-variant-numeric: tabular-nums;
+}
+.frenzy-chip {
+  border-color: #dfb8ee50;
+  background: linear-gradient(100deg, #723d5e45, #4e5f9c45);
+  color: #f0d9f8;
+}
+.effects-empty {
+  font-size: 11px;
+  color: #91a6c0;
+}
+.item-offer {
+  border: 1px solid var(--border);
+  padding: 14px;
+  border-radius: 10px;
+  margin: 12px 0;
+  display: grid;
+  gap: 9px;
+}
+.item-offer strong {
+  font-size: 12px;
+}
+.item-offer p {
+  font-size: 11px;
+  color: #9eb0c9;
+  line-height: 1.7;
+  margin: 0;
+}
+.item-offer small {
+  font-size: 10px;
+  color: #bdcce0;
+}
+.item-offer .buy-button {
+  justify-self: start;
+  min-height: 36px;
+}
+.gold-balance {
+  color: #eed29b;
+  font-weight: 650;
+  font-size: 17px;
+}
+.has-frenzy .coin-universe {
+  filter: drop-shadow(0 0 18px #b997ff55);
+}
+@media (max-width: 420px) {
+  .booster-grid {
+    grid-template-columns: 1fr;
+  }
+}

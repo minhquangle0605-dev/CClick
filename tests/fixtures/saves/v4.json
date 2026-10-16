@@ -1,0 +1,105 @@
+{
+  "contentVersion": "0.4.0",
+  "appVersion": "0.5.0",
+  "savedAtUtc": "2026-10-14T00:00:00.000Z",
+  "checksum": "0101546e53aef50a337f7afa6ba555361c77b685da0a54a6cf9b87acdf9b0d31",
+  "schemaVersion": 4,
+  "payload": {
+    "runId": "test-run",
+    "revision": 3,
+    "wallet": {
+      "coin": "1005000",
+      "goldCoin": "75"
+    },
+    "generators": {
+      "generator.auto-press": 1
+    },
+    "purchasedUpgradeIds": [],
+    "statistics": {
+      "clicks": 0,
+      "totalProducedCoin": "1000000",
+      "totalSpentCoin": "0",
+      "totalGiftCoin": "5000"
+    },
+    "lastSimulatedAtUtc": "2026-10-14T00:00:00.000Z",
+    "offlineCps": "1.57",
+    "inventory": {
+      "chest.gold": 1,
+      "key.star": 1,
+      "booster.turbo-mint": 1
+    },
+    "effectsAtMs": 1791936000000,
+    "effects": [],
+    "events": {
+      "activeMs": 0,
+      "rng": 1080637145,
+      "sequence": 0,
+      "nextRainAt": 210192,
+      "rainEndsAt": null,
+      "nextRainbowAt": null,
+      "rainbowUnlocked": false,
+      "objects": []
+    },
+    "offlineEfficiency": "0.5",
+    "cards": {
+      "owned": {
+        "card.mint-gear": {
+          "level": 2,
+          "duplicates": 4,
+          "convertedGold": "0"
+        },
+        "card.clockwork": {
+          "level": 3,
+          "duplicates": 0,
+          "convertedGold": "0"
+        },
+        "card.prism-heart": {
+          "level": 10,
+          "duplicates": 0,
+          "convertedGold": "6"
+        },
+        "card.rainbow-finder": {
+          "level": 1,
+          "duplicates": 0,
+          "convertedGold": "0"
+        }
+      },
+      "equipped": ["card.mint-gear", "card.clockwork"]
+    },
+    "chests": {
+      "rng": 4115954825,
+      "opened": 1,
+      "starterClaimed": true,
+      "acknowledged": false,
+      "lastResult": {
+        "id": 1,
+        "chestId": "chest.gold",
+        "openedAtUtc": "2026-10-14T00:00:00.000Z",
+        "rewards": [
+          {
+            "kind": "currency",
+            "currency": "coin",
+            "amount": "5000"
+          },
+          {
+            "kind": "card",
+            "cardId": "card.mint-gear",
+            "quantity": 1,
+            "note": "duplicate"
+          },
+          {
+            "kind": "card",
+            "cardId": "card.rainbow-finder",
+            "quantity": 1,
+            "note": "new"
+          },
+          {
+            "kind": "currency",
+            "currency": "goldCoin",
+            "amount": "5"
+          }
+        ]
+      }
+    }
+  }
+}

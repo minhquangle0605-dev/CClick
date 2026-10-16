@@ -1,0 +1,392 @@
+[
+  {
+    "id": "upgrade.polished-die",
+    "nameKey": "upgrade.polished-die.name",
+    "descriptionKey": "upgrade.polished-die.description",
+    "iconId": "polished-die",
+    "price": "50",
+    "requires": [],
+    "effect": {
+      "target": "click",
+      "operation": "add",
+      "value": "1"
+    }
+  },
+  {
+    "id": "upgrade.reinforced-die",
+    "nameKey": "upgrade.reinforced-die.name",
+    "descriptionKey": "upgrade.reinforced-die.description",
+    "iconId": "polished-die",
+    "price": "500",
+    "requires": ["upgrade.polished-die"],
+    "effect": {
+      "target": "click",
+      "operation": "add",
+      "value": "4"
+    }
+  },
+  {
+    "id": "upgrade.precision-drive",
+    "nameKey": "upgrade.precision-drive.name",
+    "descriptionKey": "upgrade.precision-drive.description",
+    "iconId": "efficiency",
+    "price": "750",
+    "requires": ["generator.auto-press"],
+    "effect": {
+      "target": "production",
+      "operation": "multiply",
+      "value": "2"
+    }
+  },
+  {
+    "id": "upgrade.silver-resonance",
+    "nameKey": "upgrade.silver-resonance.name",
+    "descriptionKey": "upgrade.silver-resonance.description",
+    "iconId": "polished-die",
+    "price": "5000",
+    "requires": ["upgrade.reinforced-die"],
+    "effect": {
+      "target": "click",
+      "operation": "multiply",
+      "value": "2"
+    }
+  },
+  {
+    "id": "upgrade.assembly-line",
+    "nameKey": "upgrade.assembly-line.name",
+    "descriptionKey": "upgrade.assembly-line.description",
+    "iconId": "efficiency",
+    "price": "15000",
+    "requires": ["generator.mint-workshop", "upgrade.precision-drive"],
+    "effect": {
+      "target": "production",
+      "operation": "multiply",
+      "value": "2"
+    }
+  },
+  {
+    "id": "upgrade.plasma-touch",
+    "nameKey": "upgrade.plasma-touch.name",
+    "descriptionKey": "upgrade.plasma-touch.description",
+    "iconId": "polished-die",
+    "price": "40000",
+    "requires": ["upgrade.silver-resonance"],
+    "effect": {
+      "target": "click",
+      "operation": "multiply",
+      "value": "8"
+    }
+  },
+  {
+    "id": "upgrade.stellar-efficiency",
+    "nameKey": "upgrade.stellar-efficiency.name",
+    "descriptionKey": "upgrade.stellar-efficiency.description",
+    "iconId": "efficiency",
+    "price": "250000",
+    "requires": ["generator.plasma-forge", "upgrade.assembly-line"],
+    "effect": {
+      "target": "production",
+      "operation": "multiply",
+      "value": "2"
+    }
+  },
+  {
+    "id": "upgrade.star-touch",
+    "nameKey": "upgrade.star-touch.name",
+    "descriptionKey": "upgrade.star-touch.description",
+    "iconId": "polished-die",
+    "price": "500000",
+    "requires": ["upgrade.plasma-touch"],
+    "effect": {
+      "target": "click",
+      "operation": "multiply",
+      "value": "8"
+    }
+  },
+  {
+    "id": "upgrade.orbital-touch",
+    "nameKey": "upgrade.orbital-touch.name",
+    "descriptionKey": "upgrade.orbital-touch.description",
+    "iconId": "polished-die",
+    "price": "6000000",
+    "requires": ["upgrade.star-touch"],
+    "effect": {
+      "target": "click",
+      "operation": "multiply",
+      "value": "8"
+    }
+  },
+  {
+    "id": "upgrade.lunar-touch",
+    "nameKey": "upgrade.lunar-touch.name",
+    "descriptionKey": "upgrade.lunar-touch.description",
+    "iconId": "polished-die",
+    "price": "80000000",
+    "requires": ["upgrade.orbital-touch"],
+    "effect": {
+      "target": "click",
+      "operation": "multiply",
+      "value": "8"
+    }
+  },
+  {
+    "id": "upgrade.orbital-control",
+    "nameKey": "upgrade.orbital-control.name",
+    "descriptionKey": "upgrade.orbital-control.description",
+    "iconId": "efficiency",
+    "price": "500000000",
+    "requires": ["upgrade.stellar-efficiency", "generator.star-core"],
+    "effect": {
+      "target": "production",
+      "operation": "multiply",
+      "value": "2"
+    }
+  },
+  {
+    "id": "upgrade.photon-touch",
+    "nameKey": "upgrade.photon-touch.name",
+    "descriptionKey": "upgrade.photon-touch.description",
+    "iconId": "polished-die",
+    "price": "1000000000",
+    "requires": ["upgrade.lunar-touch"],
+    "effect": {
+      "target": "click",
+      "operation": "multiply",
+      "value": "8"
+    }
+  },
+  {
+    "id": "upgrade.vacuum-cooling",
+    "nameKey": "upgrade.vacuum-cooling.name",
+    "descriptionKey": "upgrade.vacuum-cooling.description",
+    "iconId": "efficiency",
+    "price": "4000000000",
+    "requires": ["upgrade.orbital-control", "generator.orbital-mint"],
+    "effect": {
+      "target": "production",
+      "operation": "multiply",
+      "value": "2"
+    }
+  },
+  {
+    "id": "upgrade.quantum-touch",
+    "nameKey": "upgrade.quantum-touch.name",
+    "descriptionKey": "upgrade.quantum-touch.description",
+    "iconId": "polished-die",
+    "price": "15000000000",
+    "requires": ["upgrade.photon-touch"],
+    "effect": {
+      "target": "click",
+      "operation": "multiply",
+      "value": "8"
+    }
+  },
+  {
+    "id": "upgrade.lunar-logistics",
+    "nameKey": "upgrade.lunar-logistics.name",
+    "descriptionKey": "upgrade.lunar-logistics.description",
+    "iconId": "efficiency",
+    "price": "25000000000",
+    "requires": ["upgrade.vacuum-cooling", "generator.orbital-mint"],
+    "effect": {
+      "target": "production",
+      "operation": "multiply",
+      "value": "2"
+    }
+  },
+  {
+    "id": "upgrade.photon-conveyor",
+    "nameKey": "upgrade.photon-conveyor.name",
+    "descriptionKey": "upgrade.photon-conveyor.description",
+    "iconId": "efficiency",
+    "price": "150000000000",
+    "requires": ["upgrade.lunar-logistics", "generator.lunar-array"],
+    "effect": {
+      "target": "production",
+      "operation": "multiply",
+      "value": "2"
+    }
+  },
+  {
+    "id": "upgrade.nebula-touch",
+    "nameKey": "upgrade.nebula-touch.name",
+    "descriptionKey": "upgrade.nebula-touch.description",
+    "iconId": "polished-die",
+    "price": "200000000000",
+    "requires": ["upgrade.quantum-touch"],
+    "effect": {
+      "target": "click",
+      "operation": "multiply",
+      "value": "8"
+    }
+  },
+  {
+    "id": "upgrade.quantum-sync",
+    "nameKey": "upgrade.quantum-sync.name",
+    "descriptionKey": "upgrade.quantum-sync.description",
+    "iconId": "efficiency",
+    "price": "1000000000000",
+    "requires": ["upgrade.photon-conveyor", "generator.quantum-vault"],
+    "effect": {
+      "target": "production",
+      "operation": "multiply",
+      "value": "2"
+    }
+  },
+  {
+    "id": "upgrade.galactic-touch",
+    "nameKey": "upgrade.galactic-touch.name",
+    "descriptionKey": "upgrade.galactic-touch.description",
+    "iconId": "polished-die",
+    "price": "3000000000000",
+    "requires": ["upgrade.nebula-touch"],
+    "effect": {
+      "target": "click",
+      "operation": "multiply",
+      "value": "8"
+    }
+  },
+  {
+    "id": "upgrade.stellar-routing",
+    "nameKey": "upgrade.stellar-routing.name",
+    "descriptionKey": "upgrade.stellar-routing.description",
+    "iconId": "efficiency",
+    "price": "7500000000000",
+    "requires": ["upgrade.quantum-sync", "generator.quantum-vault"],
+    "effect": {
+      "target": "production",
+      "operation": "multiply",
+      "value": "2"
+    }
+  },
+  {
+    "id": "upgrade.cosmic-touch",
+    "nameKey": "upgrade.cosmic-touch.name",
+    "descriptionKey": "upgrade.cosmic-touch.description",
+    "iconId": "polished-die",
+    "price": "40000000000000",
+    "requires": ["upgrade.galactic-touch"],
+    "effect": {
+      "target": "click",
+      "operation": "multiply",
+      "value": "8"
+    }
+  },
+  {
+    "id": "upgrade.solar-harvest",
+    "nameKey": "upgrade.solar-harvest.name",
+    "descriptionKey": "upgrade.solar-harvest.description",
+    "iconId": "efficiency",
+    "price": "60000000000000",
+    "requires": ["upgrade.stellar-routing", "generator.stellar-network"],
+    "effect": {
+      "target": "production",
+      "operation": "multiply",
+      "value": "2"
+    }
+  },
+  {
+    "id": "upgrade.galactic-pulse",
+    "nameKey": "upgrade.galactic-pulse.name",
+    "descriptionKey": "upgrade.galactic-pulse.description",
+    "iconId": "efficiency",
+    "price": "400000000000000",
+    "requires": ["upgrade.solar-harvest", "generator.galactic-engine"],
+    "effect": {
+      "target": "production",
+      "operation": "multiply",
+      "value": "2"
+    }
+  },
+  {
+    "id": "upgrade.infinity-touch",
+    "nameKey": "upgrade.infinity-touch.name",
+    "descriptionKey": "upgrade.infinity-touch.description",
+    "iconId": "polished-die",
+    "price": "500000000000000",
+    "requires": ["upgrade.cosmic-touch"],
+    "effect": {
+      "target": "click",
+      "operation": "multiply",
+      "value": "8"
+    }
+  },
+  {
+    "id": "upgrade.parallel-universe",
+    "nameKey": "upgrade.parallel-universe.name",
+    "descriptionKey": "upgrade.parallel-universe.description",
+    "iconId": "efficiency",
+    "price": "3000000000000000",
+    "requires": ["upgrade.galactic-pulse", "generator.galactic-engine"],
+    "effect": {
+      "target": "production",
+      "operation": "multiply",
+      "value": "2"
+    }
+  },
+  {
+    "id": "upgrade.eternal-touch",
+    "nameKey": "upgrade.eternal-touch.name",
+    "descriptionKey": "upgrade.eternal-touch.description",
+    "iconId": "polished-die",
+    "price": "6000000000000000",
+    "requires": ["upgrade.infinity-touch"],
+    "effect": {
+      "target": "click",
+      "operation": "multiply",
+      "value": "8"
+    }
+  },
+  {
+    "id": "upgrade.infinity-loop",
+    "nameKey": "upgrade.infinity-loop.name",
+    "descriptionKey": "upgrade.infinity-loop.description",
+    "iconId": "efficiency",
+    "price": "20000000000000000",
+    "requires": ["upgrade.parallel-universe", "generator.infinity-foundry"],
+    "effect": {
+      "target": "production",
+      "operation": "multiply",
+      "value": "2"
+    }
+  },
+  {
+    "id": "upgrade.origin-touch",
+    "nameKey": "upgrade.origin-touch.name",
+    "descriptionKey": "upgrade.origin-touch.description",
+    "iconId": "polished-die",
+    "price": "80000000000000000",
+    "requires": ["upgrade.eternal-touch"],
+    "effect": {
+      "target": "click",
+      "operation": "multiply",
+      "value": "8"
+    }
+  },
+  {
+    "id": "upgrade.cosmic-harmony",
+    "nameKey": "upgrade.cosmic-harmony.name",
+    "descriptionKey": "upgrade.cosmic-harmony.description",
+    "iconId": "efficiency",
+    "price": "100000000000000000",
+    "requires": ["upgrade.infinity-loop", "generator.infinity-foundry"],
+    "effect": {
+      "target": "production",
+      "operation": "multiply",
+      "value": "2"
+    }
+  },
+  {
+    "id": "upgrade.eternal-mint",
+    "nameKey": "upgrade.eternal-mint.name",
+    "descriptionKey": "upgrade.eternal-mint.description",
+    "iconId": "efficiency",
+    "price": "500000000000000000",
+    "requires": ["upgrade.cosmic-harmony", "generator.infinity-foundry"],
+    "effect": {
+      "target": "production",
+      "operation": "multiply",
+      "value": "2"
+    }
+  }
+]

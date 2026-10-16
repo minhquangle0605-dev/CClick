@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 3,
+  "contentVersion": "0.3.0",
+  "appVersion": "0.4.0",
+  "savedAtUtc": "2026-10-15T00:00:03.000Z",
+  "payload": {
+    "runId": "fixture-v3",
+    "revision": 3,
+    "wallet": {
+      "coin": "1006",
+      "goldCoin": "26"
+    },
+    "generators": {
+      "generator.auto-press": 1
+    },
+    "purchasedUpgradeIds": [],
+    "statistics": {
+      "clicks": 0,
+      "totalProducedCoin": "1106",
+      "totalSpentCoin": "100"
+    },
+    "lastSimulatedAtUtc": "2026-10-15T00:00:03.000Z",
+    "offlineCps": "1",
+    "inventory": {
+      "booster.turbo-mint": 1,
+      "booster.time-warp": 1,
+      "booster.golden-magnet": 1
+    },
+    "effects": [
+      {
+        "target": "production",
+        "value": "2",
+        "stackGroup": "booster-production",
+        "sourceId": "booster.turbo-mint",
+        "operation": "multiply",
+        "startsAt": 1792022400000,
+        "expiresAt": 1792022460000,
+        "stackPolicy": "extend"
+      }
+    ],
+    "effectsAtMs": 1792022403000,
+    "events": {
+      "activeMs": 3000,
+      "rng": 2446508224,
+      "sequence": 1,
+      "nextRainAt": 264355,
+      "rainEndsAt": 16000,
+      "nextRainbowAt": null,
+      "rainbowUnlocked": false,
+      "objects": [
+        {
+          "id": "rain-1-1",
+          "kind": "gold",
+          "x": 31,
+          "lane": 0,
+          "spawnsAt": 2000,
+          "expiresAt": 8000
+        },
+        {
+          "id": "rain-1-2",
+          "kind": "gold",
+          "x": 50,
+          "lane": 0,
+          "spawnsAt": 3000,
+          "expiresAt": 9000
+        },
+        {
+          "id": "rain-1-3",
+          "kind": "gold",
+          "x": 70,
+          "lane": 0,
+          "spawnsAt": 4000,
+          "expiresAt": 10000
+        },
+        {
+          "id": "rain-1-4",
+          "kind": "gold",
+          "x": 91,
+          "lane": 0,
+          "spawnsAt": 5000,
+          "expiresAt": 11000
+        },
+        {
+          "id": "rain-1-5",
+          "kind": "gold",
+          "x": 11,
+          "lane": 1,
+          "spawnsAt": 6000,
+          "expiresAt": 12000
+        },
+        {
+          "id": "rain-1-6",
+          "kind": "gold",
+          "x": 29,
+          "lane": 1,
+          "spawnsAt": 7000,
+          "expiresAt": 13000
+        },
+        {
+          "id": "rain-1-7",
+          "kind": "gold",
+          "x": 49,
+          "lane": 1,
+          "spawnsAt": 8000,
+          "expiresAt": 14000
+        },
+        {
+          "id": "rain-1-8",
+          "kind": "gold",
+          "x": 71,
+          "lane": 1,
+          "spawnsAt": 9000,
+          "expiresAt": 15000
+        },
+        {
+          "id": "rain-1-9",
+          "kind": "gold",
+          "x": 91,
+          "lane": 1,
+          "spawnsAt": 10000,
+          "expiresAt": 16000
+        }
+      ]
+    }
+  },
+  "checksum": "c9297eb522ca849b6a0647888e030742040668819a4e06e87444748fef8ec55d"
+}

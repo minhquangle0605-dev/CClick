@@ -1,0 +1,77 @@
+[
+  {
+    "day": 1,
+    "rewards": [
+      {
+        "kind": "currency",
+        "currency": "goldCoin",
+        "amount": "5"
+      }
+    ]
+  },
+  {
+    "day": 2,
+    "rewards": [
+      {
+        "kind": "item",
+        "itemId": "booster.turbo-mint",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "day": 3,
+    "rewards": [
+      {
+        "kind": "item",
+        "itemId": "chest.silver",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "day": 4,
+    "rewards": [
+      {
+        "kind": "item",
+        "itemId": "booster.power-tap",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "day": 5,
+    "rewards": [
+      {
+        "kind": "item",
+        "itemId": "key.star",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "day": 6,
+    "rewards": [
+      {
+        "kind": "item",
+        "itemId": "booster.time-warp",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "day": 7,
+    "rewards": [
+      {
+        "kind": "item",
+        "itemId": "chest.gold",
+        "quantity": 1
+      },
+      {
+        "kind": "item",
+        "itemId": "key.star",
+        "quantity": 1
+      }
+    ]
+  }
+]
