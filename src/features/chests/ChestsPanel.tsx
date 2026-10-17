@@ -7,8 +7,8 @@ import { chestError } from '@core/chests/commands';
 import { lootOdds } from '@core/chests/loot';
 import { amount } from '@shared/amount';
 import { text } from '@ui/components/text';
-import { Icon } from '@ui/components/Icon';
-import { rewardLabel } from '@features/rewards/reward-label';
+import { ItemArtwork } from '@ui/components/ItemArtwork';
+import { RewardDisplay } from '@features/rewards/RewardDisplay';
 import './chests.css';
 
 export function ChestsPanel({
@@ -33,7 +33,7 @@ export function ChestsPanel({
     return (
       <section className="chest-result">
         <span className="receipt-mark">
-          <Icon name="gem" size={42} />
+          <ItemArtwork id={result.chestId} size={80} />
         </span>
         <h3>
           {text('chests.result')} #{result.id}
@@ -41,7 +41,9 @@ export function ChestsPanel({
         <p>{text('chests.resultSaved')}</p>
         <ul>
           {result.rewards.map((reward, index) => (
-            <li key={index}>{rewardLabel(reward, catalog, undefined, format)}</li>
+            <li key={index}>
+              <RewardDisplay reward={reward} catalog={catalog} />
+            </li>
           ))}
         </ul>
         <small>
@@ -96,7 +98,8 @@ export function ChestsPanel({
       </div>
       <div className="chest-inventory">
         <span>
-          ✦ {text('key.star.name')}: <b>{format(state.inventory['key.star'] ?? 0)}</b>
+          <ItemArtwork id="key.star" size={32} /> {text('key.star.name')}:{' '}
+          <b>{format(state.inventory['key.star'] ?? 0)}</b>
         </span>
         <span>
           {text('chests.opened')} {format(state.chests.opened)}
@@ -113,7 +116,7 @@ export function ChestsPanel({
               setMessage('');
             }}
           >
-            <Icon name="gem" size={36} />
+            <ItemArtwork id={chest.id} size={128} />
             <strong>{text(chest.nameKey)}</strong>
             <span>
               {text('shop.owned')} {format(state.inventory[chest.id] ?? 0)}
@@ -135,7 +138,9 @@ export function ChestsPanel({
         <h4>{text('chests.guaranteed')}</h4>
         <ul>
           {chest.guaranteed.map((reward, index) => (
-            <li key={index}>{rewardLabel(reward, catalog, state, format)}</li>
+            <li key={index}>
+              <RewardDisplay reward={reward} catalog={catalog} state={state} />
+            </li>
           ))}
         </ul>
         {chest.draws.map((draw) => {
@@ -155,7 +160,9 @@ export function ChestsPanel({
                 <tbody>
                   {lootOdds(table).map((entry, index) => (
                     <tr key={index}>
-                      <td>{rewardLabel(entry.reward, catalog, state, format)}</td>
+                      <td>
+                        <RewardDisplay reward={entry.reward} catalog={catalog} state={state} />
+                      </td>
                       <td>
                         {(entry.probability * 100).toLocaleString('vi-VN', {
                           maximumFractionDigits: 2,

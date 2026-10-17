@@ -3,9 +3,10 @@ import { afterEach, expect, it, vi } from 'vitest';
 import { cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { BootScreen } from '@app/BootScreen';
 import { readResetBackupForRecovery, recoverFromFile } from '@app/recovery';
-import { SaveReadError } from '@platform/storage/save-codec';
+import { SaveReadError, decodeSave } from '@platform/storage/save-codec';
 import resetSave from '../fixtures/saves/v7.json';
-import type { SaveEnvelope } from '@core/state/game-state';
+import { gameFixture } from '../helpers/game-fixture';
+import { webcrypto } from 'node:crypto';
 
 vi.mock('@app/recovery', () => ({
   readResetBackupForRecovery: vi.fn(),
@@ -16,10 +17,12 @@ vi.mock('@app/recovery', () => ({
 afterEach(() => {
   cleanup();
   vi.resetAllMocks();
+  vi.unstubAllGlobals();
 });
 
 it('requires a separate confirmation before restoring the pre-reset backup on boot failure', async () => {
-  const candidate = resetSave as SaveEnvelope;
+  vi.stubGlobal('crypto', webcrypto);
+  const candidate = await decodeSave(resetSave, gameFixture().catalog);
   vi.mocked(readResetBackupForRecovery).mockResolvedValue(candidate);
   vi.mocked(recoverFromFile).mockResolvedValue(undefined);
   const retry = vi.fn().mockResolvedValue(undefined);

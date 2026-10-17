@@ -10,7 +10,7 @@ import type {
   ProgressTracking,
 } from '@core/progression/progression.types';
 
-/** Schema 7. Add later systems only together with their migrations. */
+/** Schema 8. Add later systems only together with their migrations. */
 export interface GameState {
   runId: string;
   revision: number;
@@ -29,6 +29,7 @@ export interface GameState {
   offlineClickPower: AmountString;
   automation: {
     upgradeEnabled: boolean;
+    autoEquipEnabled: boolean;
     clickRemainderMs: number;
     automaticClicks: number;
     actions: number;
@@ -47,7 +48,7 @@ export interface GameState {
 }
 
 export interface SaveEnvelope {
-  schemaVersion: 7;
+  schemaVersion: 8;
   contentVersion: string;
   appVersion: string;
   savedAtUtc: string;

@@ -274,3 +274,14 @@
     display: none;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .coin-button {
+    transition: none;
+  }
+  .coin-button:hover,
+  .coin-button:active,
+  .coin-button.is-pressed {
+    transform: none;
+  }
+}

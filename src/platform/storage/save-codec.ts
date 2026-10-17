@@ -51,7 +51,10 @@ const v6StateSchema = v5StateSchema.extend({
     lastAction: z.string().max(160).nullable(),
   }),
 });
-const stateSchema = v6StateSchema.extend({ itemHistory: itemHistorySchema });
+const v7StateSchema = v6StateSchema.extend({ itemHistory: itemHistorySchema });
+const stateSchema = v7StateSchema.extend({
+  automation: v6StateSchema.shape.automation.extend({ autoEquipEnabled: z.boolean() }),
+});
 const envelopeFields = {
   contentVersion: z.string(),
   appVersion: z.string(),
@@ -88,9 +91,14 @@ const v6Envelope = z.strictObject({
   schemaVersion: z.literal(6),
   payload: v6StateSchema,
 });
-const currentEnvelope = z.strictObject({
+const v7Envelope = z.strictObject({
   ...envelopeFields,
   schemaVersion: z.literal(7),
+  payload: v7StateSchema,
+});
+const currentEnvelope = z.strictObject({
+  ...envelopeFields,
+  schemaVersion: z.literal(8),
   payload: stateSchema,
 });
 const envelopeSchema = z.discriminatedUnion('schemaVersion', [
@@ -100,6 +108,7 @@ const envelopeSchema = z.discriminatedUnion('schemaVersion', [
   v4Envelope,
   v5Envelope,
   v6Envelope,
+  v7Envelope,
   currentEnvelope,
 ]);
 
@@ -126,7 +135,7 @@ export async function createSave(
   nowUtc: string,
 ): Promise<SaveEnvelope> {
   const unsigned = {
-    schemaVersion: 7 as const,
+    schemaVersion: 8 as const,
     contentVersion: catalog.balance.contentVersion,
     appVersion: APP_VERSION,
     savedAtUtc: nowUtc,
@@ -141,7 +150,7 @@ export async function decodeSave(input: unknown, catalog: GameCatalog): Promise<
     typeof input === 'object' &&
     'schemaVersion' in input &&
     typeof input.schemaVersion === 'number' &&
-    input.schemaVersion > 7
+    input.schemaVersion > 8
   ) {
     throw new SaveReadError('future-version');
   }
@@ -154,11 +163,11 @@ export async function decodeSave(input: unknown, catalog: GameCatalog): Promise<
       (unsigned.schemaVersion === 3 && unsigned.contentVersion === '0.3.0') ||
       (unsigned.schemaVersion === 4 && unsigned.contentVersion === '0.4.0') ||
       (unsigned.schemaVersion === 5 && ['0.5.0', '0.6.0'].includes(unsigned.contentVersion)) ||
-      (unsigned.schemaVersion === 6 && unsigned.contentVersion === '0.7.0')) &&
+      ([6, 7].includes(unsigned.schemaVersion) && unsigned.contentVersion === '0.7.0')) &&
     catalog.balance.contentVersion === '0.7.0';
   if (
     !migrating &&
-    (unsigned.schemaVersion !== 7 || unsigned.contentVersion !== catalog.balance.contentVersion)
+    (unsigned.schemaVersion !== 8 || unsigned.contentVersion !== catalog.balance.contentVersion)
   )
     throw new SaveReadError('content-version');
   if ((await checksum(unsigned)) !== expected) throw new SaveReadError('invalid');
@@ -182,7 +191,8 @@ export async function decodeSave(input: unknown, catalog: GameCatalog): Promise<
     unsigned.schemaVersion === 4 ||
     unsigned.schemaVersion === 5 ||
     unsigned.schemaVersion === 6 ||
-    unsigned.schemaVersion === 7
+    unsigned.schemaVersion === 7 ||
+    unsigned.schemaVersion === 8
       ? unsigned.payload
       : {
           ...legacyState,
@@ -196,7 +206,8 @@ export async function decodeSave(input: unknown, catalog: GameCatalog): Promise<
     unsigned.schemaVersion === 4 ||
     unsigned.schemaVersion === 5 ||
     unsigned.schemaVersion === 6 ||
-    unsigned.schemaVersion === 7
+    unsigned.schemaVersion === 7 ||
+    unsigned.schemaVersion === 8
       ? unsigned.payload
       : {
           ...previous,
@@ -212,7 +223,10 @@ export async function decodeSave(input: unknown, catalog: GameCatalog): Promise<
           },
         };
   const progressionState =
-    unsigned.schemaVersion === 5 || unsigned.schemaVersion === 6 || unsigned.schemaVersion === 7
+    unsigned.schemaVersion === 5 ||
+    unsigned.schemaVersion === 6 ||
+    unsigned.schemaVersion === 7 ||
+    unsigned.schemaVersion === 8
       ? unsigned.payload
       : {
           ...collectionState,
@@ -225,7 +239,7 @@ export async function decodeSave(input: unknown, catalog: GameCatalog): Promise<
           achievements: { unlockedIds: [], claimedIds: [] },
         };
   const automationState =
-    unsigned.schemaVersion === 6 || unsigned.schemaVersion === 7
+    unsigned.schemaVersion === 6 || unsigned.schemaVersion === 7 || unsigned.schemaVersion === 8
       ? unsigned.payload
       : {
           ...progressionState,
@@ -238,12 +252,19 @@ export async function decodeSave(input: unknown, catalog: GameCatalog): Promise<
             lastAction: null,
           },
         };
-  const state: GameState =
-    unsigned.schemaVersion === 7
+  const historyState =
+    unsigned.schemaVersion === 7 || unsigned.schemaVersion === 8
       ? unsigned.payload
       : {
           ...automationState,
           itemHistory: createItemHistory(unsigned.savedAtUtc, automationState),
+        };
+  const state: GameState =
+    unsigned.schemaVersion === 8
+      ? unsigned.payload
+      : {
+          ...historyState,
+          automation: { ...historyState.automation, autoEquipEnabled: true },
         };
   // Old saves receive the new click baseline on their first settlement, never retroactively.
   if (
@@ -290,7 +311,7 @@ export async function decodeSave(input: unknown, catalog: GameCatalog): Promise<
   } catch {
     throw new SaveReadError('invalid');
   }
-  if (unsigned.schemaVersion !== 7 || unsigned.contentVersion !== catalog.balance.contentVersion)
+  if (unsigned.schemaVersion !== 8 || unsigned.contentVersion !== catalog.balance.contentVersion)
     return createSave(
       refreshProgress(state, catalog, state.lastSimulatedAtUtc),
       catalog,

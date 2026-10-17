@@ -1,0 +1,716 @@
+[
+  {
+    "id": "coin.rainbow",
+    "name": "Xu cầu vồng",
+    "category": "coins",
+    "file": "images/coins/coin.rainbow.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "generator.hand-press",
+    "name": "Máy ép xu thủ công",
+    "category": "generators",
+    "file": "images/generators/generator.hand-press.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "generator.auto-press",
+    "name": "Máy dập tự động",
+    "category": "generators",
+    "file": "images/generators/generator.auto-press.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "generator.mint-workshop",
+    "name": "Xưởng đúc xu",
+    "category": "generators",
+    "file": "images/generators/generator.mint-workshop.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "generator.mint-factory",
+    "name": "Nhà máy tiền xu",
+    "category": "generators",
+    "file": "images/generators/generator.mint-factory.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "generator.plasma-forge",
+    "name": "Lò đúc plasma",
+    "category": "generators",
+    "file": "images/generators/generator.plasma-forge.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "generator.star-core",
+    "name": "Lõi sao bốn cánh",
+    "category": "generators",
+    "file": "images/generators/generator.star-core.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "generator.orbital-mint",
+    "name": "Xưởng đúc quỹ đạo",
+    "category": "generators",
+    "file": "images/generators/generator.orbital-mint.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "generator.lunar-array",
+    "name": "Cụm máy Mặt Trăng",
+    "category": "generators",
+    "file": "images/generators/generator.lunar-array.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "generator.quantum-vault",
+    "name": "Kho lượng tử",
+    "category": "generators",
+    "file": "images/generators/generator.quantum-vault.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "generator.stellar-network",
+    "name": "Mạng lưới tinh tú",
+    "category": "generators",
+    "file": "images/generators/generator.stellar-network.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "generator.galactic-engine",
+    "name": "Động cơ thiên hà",
+    "category": "generators",
+    "file": "images/generators/generator.galactic-engine.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "generator.infinity-foundry",
+    "name": "Lò đúc vô tận",
+    "category": "generators",
+    "file": "images/generators/generator.infinity-foundry.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.polished-die",
+    "name": "Khuôn đúc sáng bóng",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.polished-die.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.reinforced-die",
+    "name": "Khuôn đúc gia cường",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.reinforced-die.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.precision-drive",
+    "name": "Truyền động chính xác",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.precision-drive.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.silver-resonance",
+    "name": "Cộng hưởng bạc",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.silver-resonance.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.assembly-line",
+    "name": "Dây chuyền đồng bộ",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.assembly-line.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.plasma-touch",
+    "name": "Chạm plasma",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.plasma-touch.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.stellar-efficiency",
+    "name": "Hiệu suất tinh tú",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.stellar-efficiency.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.star-touch",
+    "name": "Chạm ánh sao",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.star-touch.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.orbital-touch",
+    "name": "Chạm quỹ đạo",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.orbital-touch.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.lunar-touch",
+    "name": "Chạm trăng bạc",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.lunar-touch.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.orbital-control",
+    "name": "Điều phối quỹ đạo",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.orbital-control.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.photon-touch",
+    "name": "Chạm photon",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.photon-touch.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.vacuum-cooling",
+    "name": "Làm mát chân không",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.vacuum-cooling.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.quantum-touch",
+    "name": "Chạm lượng tử",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.quantum-touch.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.lunar-logistics",
+    "name": "Vận tải Mặt Trăng",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.lunar-logistics.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.photon-conveyor",
+    "name": "Băng chuyền photon",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.photon-conveyor.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.nebula-touch",
+    "name": "Chạm tinh vân",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.nebula-touch.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.quantum-sync",
+    "name": "Đồng bộ lượng tử",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.quantum-sync.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.galactic-touch",
+    "name": "Chạm thiên hà",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.galactic-touch.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.stellar-routing",
+    "name": "Định tuyến tinh tú",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.stellar-routing.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.cosmic-touch",
+    "name": "Chạm vũ trụ",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.cosmic-touch.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.solar-harvest",
+    "name": "Thu năng lượng sao",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.solar-harvest.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.galactic-pulse",
+    "name": "Nhịp đập thiên hà",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.galactic-pulse.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.infinity-touch",
+    "name": "Chạm vô tận",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.infinity-touch.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.parallel-universe",
+    "name": "Sản xuất song song",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.parallel-universe.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.eternal-touch",
+    "name": "Chạm vĩnh cửu",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.eternal-touch.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.infinity-loop",
+    "name": "Chu trình vô tận",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.infinity-loop.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.origin-touch",
+    "name": "Chạm khởi nguyên",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.origin-touch.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.cosmic-harmony",
+    "name": "Hòa âm vũ trụ",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.cosmic-harmony.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "upgrade.eternal-mint",
+    "name": "Xưởng đúc vĩnh cửu",
+    "category": "upgrades",
+    "file": "images/upgrades/upgrade.eternal-mint.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "card.silver-touch",
+    "name": "Chạm bạc",
+    "category": "cards",
+    "file": "images/cards/card.silver-touch.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "card.mint-gear",
+    "name": "Bánh răng đúc",
+    "category": "cards",
+    "file": "images/cards/card.mint-gear.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "card.steady-hand",
+    "name": "Bàn tay vững",
+    "category": "cards",
+    "file": "images/cards/card.steady-hand.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "card.dusk-battery",
+    "name": "Pin hoàng hôn",
+    "category": "cards",
+    "file": "images/cards/card.dusk-battery.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "card.rain-lens",
+    "name": "Thấu kính mưa",
+    "category": "cards",
+    "file": "images/cards/card.rain-lens.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "card.gold-chip",
+    "name": "Mạch vàng",
+    "category": "cards",
+    "file": "images/cards/card.gold-chip.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "card.rainbow-finder",
+    "name": "Dò cầu vồng",
+    "category": "cards",
+    "file": "images/cards/card.rainbow-finder.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "card.frenzy-core",
+    "name": "Lõi Frenzy",
+    "category": "cards",
+    "file": "images/cards/card.frenzy-core.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "card.rain-cloud",
+    "name": "Mây tích vàng",
+    "category": "cards",
+    "file": "images/cards/card.rain-cloud.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "card.clockwork",
+    "name": "Nhịp máy",
+    "category": "cards",
+    "file": "images/cards/card.clockwork.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "card.star-forge",
+    "name": "Lò sao",
+    "category": "cards",
+    "file": "images/cards/card.star-forge.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "card.prism-heart",
+    "name": "Trái tim lăng kính",
+    "category": "cards",
+    "file": "images/cards/card.prism-heart.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "booster.turbo-mint",
+    "name": "Turbo Mint",
+    "category": "boosters",
+    "file": "images/boosters/booster.turbo-mint.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "booster.power-tap",
+    "name": "Power Tap",
+    "category": "boosters",
+    "file": "images/boosters/booster.power-tap.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "booster.golden-magnet",
+    "name": "Golden Magnet",
+    "category": "boosters",
+    "file": "images/boosters/booster.golden-magnet.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "booster.time-warp",
+    "name": "Time Warp 1h",
+    "category": "boosters",
+    "file": "images/boosters/booster.time-warp.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "chest.silver",
+    "name": "Rương bạc",
+    "category": "chests",
+    "file": "images/chests/chest.silver.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "chest.gold",
+    "name": "Rương vàng",
+    "category": "chests",
+    "file": "images/chests/chest.gold.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "key.star",
+    "name": "Chìa sao",
+    "category": "keys",
+    "file": "images/keys/key.star.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.click-1",
+    "name": "Khởi động ngón tay",
+    "category": "achievements",
+    "file": "images/achievements/achievement.click-1.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.click-2",
+    "name": "Trăm lần chạm",
+    "category": "achievements",
+    "file": "images/achievements/achievement.click-2.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.click-3",
+    "name": "Nhịp chạm bền bỉ",
+    "category": "achievements",
+    "file": "images/achievements/achievement.click-3.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.click-4",
+    "name": "Bàn tay vàng",
+    "category": "achievements",
+    "file": "images/achievements/achievement.click-4.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.production-1",
+    "name": "Nghìn Coin đầu tiên",
+    "category": "achievements",
+    "file": "images/achievements/achievement.production-1.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.production-2",
+    "name": "Xưởng đang lớn",
+    "category": "achievements",
+    "file": "images/achievements/achievement.production-2.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.production-3",
+    "name": "Cột mốc triệu Coin",
+    "category": "achievements",
+    "file": "images/achievements/achievement.production-3.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.production-4",
+    "name": "Cột mốc tỷ Coin",
+    "category": "achievements",
+    "file": "images/achievements/achievement.production-4.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.production-5",
+    "name": "Đế chế nghìn tỷ",
+    "category": "achievements",
+    "file": "images/achievements/achievement.production-5.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.production-6",
+    "name": "Chạm mốc 10^15",
+    "category": "achievements",
+    "file": "images/achievements/achievement.production-6.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.machines-1",
+    "name": "Chiếc máy đầu tiên",
+    "category": "achievements",
+    "file": "images/achievements/achievement.machines-1.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.machines-2",
+    "name": "Dây chuyền nhỏ",
+    "category": "achievements",
+    "file": "images/achievements/achievement.machines-2.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.machines-3",
+    "name": "Khu công xưởng",
+    "category": "achievements",
+    "file": "images/achievements/achievement.machines-3.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.machines-4",
+    "name": "Đội quân máy đúc",
+    "category": "achievements",
+    "file": "images/achievements/achievement.machines-4.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.upgrades-1",
+    "name": "Bước cải tiến đầu",
+    "category": "achievements",
+    "file": "images/achievements/achievement.upgrades-1.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.upgrades-2",
+    "name": "Công nghệ tiến bộ",
+    "category": "achievements",
+    "file": "images/achievements/achievement.upgrades-2.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.upgrades-3",
+    "name": "Xưởng được tối ưu",
+    "category": "achievements",
+    "file": "images/achievements/achievement.upgrades-3.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.gold-rain-1",
+    "name": "Hứng mưa vàng",
+    "category": "achievements",
+    "file": "images/achievements/achievement.gold-rain-1.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.gold-rain-2",
+    "name": "Người săn xu vàng",
+    "category": "achievements",
+    "file": "images/achievements/achievement.gold-rain-2.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.rainbow-1",
+    "name": "Chạm cầu vồng",
+    "category": "achievements",
+    "file": "images/achievements/achievement.rainbow-1.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.rainbow-2",
+    "name": "Nhịp điệu Frenzy",
+    "category": "achievements",
+    "file": "images/achievements/achievement.rainbow-2.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.collection-1",
+    "name": "Thẻ công nghệ đầu",
+    "category": "achievements",
+    "file": "images/achievements/achievement.collection-1.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.collection-2",
+    "name": "Nửa bộ sưu tập",
+    "category": "achievements",
+    "file": "images/achievements/achievement.collection-2.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.collection-3",
+    "name": "Đủ bộ công nghệ",
+    "category": "achievements",
+    "file": "images/achievements/achievement.collection-3.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.chests-1",
+    "name": "Mở kho báu",
+    "category": "achievements",
+    "file": "images/achievements/achievement.chests-1.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.chests-2",
+    "name": "Mười lần khám phá",
+    "category": "achievements",
+    "file": "images/achievements/achievement.chests-2.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.chests-3",
+    "name": "Thợ săn kho báu",
+    "category": "achievements",
+    "file": "images/achievements/achievement.chests-3.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.daily-1",
+    "name": "Lời chào mỗi ngày",
+    "category": "achievements",
+    "file": "images/achievements/achievement.daily-1.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.daily-2",
+    "name": "Trọn một vòng quà",
+    "category": "achievements",
+    "file": "images/achievements/achievement.daily-2.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "achievement.daily-3",
+    "name": "Ba mươi lần trở lại",
+    "category": "achievements",
+    "file": "images/achievements/achievement.daily-3.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "synergy.workshop",
+    "name": "Dây chuyền đồng bộ",
+    "category": "synergies",
+    "file": "images/synergies/synergy.workshop.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "synergy.weather",
+    "name": "Thời tiết vàng",
+    "category": "synergies",
+    "file": "images/synergies/synergy.weather.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "synergy.prismatic",
+    "name": "Mạch cầu vồng",
+    "category": "synergies",
+    "file": "images/synergies/synergy.prismatic.png",
+    "reuse_of": ""
+  },
+  {
+    "id": "daily.day-1",
+    "name": "Ngày 1: Gold x5",
+    "category": "daily",
+    "file": "images/daily/daily.day-1.png",
+    "reuse_of": "Dùng biểu tượng vàng trong game khi tích hợp"
+  },
+  {
+    "id": "daily.day-2",
+    "name": "Ngày 2: Turbo Mint",
+    "category": "daily",
+    "file": "images/daily/daily.day-2.png",
+    "reuse_of": "booster.turbo-mint"
+  },
+  {
+    "id": "daily.day-3",
+    "name": "Ngày 3: Rương bạc",
+    "category": "daily",
+    "file": "images/daily/daily.day-3.png",
+    "reuse_of": "chest.silver"
+  },
+  {
+    "id": "daily.day-4",
+    "name": "Ngày 4: Power Tap",
+    "category": "daily",
+    "file": "images/daily/daily.day-4.png",
+    "reuse_of": "booster.power-tap"
+  },
+  {
+    "id": "daily.day-5",
+    "name": "Ngày 5: Chìa sao",
+    "category": "daily",
+    "file": "images/daily/daily.day-5.png",
+    "reuse_of": "key.star"
+  },
+  {
+    "id": "daily.day-6",
+    "name": "Ngày 6: Time Warp",
+    "category": "daily",
+    "file": "images/daily/daily.day-6.png",
+    "reuse_of": "booster.time-warp"
+  },
+  {
+    "id": "daily.day-7",
+    "name": "Ngày 7: Rương vàng + Chìa sao",
+    "category": "daily",
+    "file": "images/daily/daily.day-7.png",
+    "reuse_of": "chest.gold, key.star"
+  }
+]

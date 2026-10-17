@@ -6,6 +6,7 @@ import type { Reward } from '@core/rewards/reward.types';
 export type PurchaseQuantity = number | 'max';
 export type DurableCommand =
   | { type: 'SetAutoUpgrade'; enabled: boolean }
+  | { type: 'SetAutoEquip'; enabled: boolean }
   | { type: 'ClaimDaily' }
   | { type: 'ClaimAchievement'; achievementId: string }
   | { type: 'PurchaseItem'; offerId: string }

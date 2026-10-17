@@ -1,5 +1,27 @@
 # Changelog
 
+## 1.8.0-rc.1 - 17/10/2026
+
+- Ba loại xu dùng mô hình 3D có thân dày, cạnh khía, viền vát và hai mặt; xu bạc bốn cánh nổi, Gold dùng họa tiết rồng từ tài nguyên hiện có, cầu vồng tám cánh trên nền kim loại nhiều màu.
+- Xu bạc lớn xoay nhẹ, nghiêng theo chuột và nhún khi bấm; Gold/cầu vồng quay chậm. Dùng cùng mô hình trong ví, sự kiện, phần thưởng và thống kê.
+- Một WebGL context và vòng vẽ dùng chung, tối đa một lượt dựng mỗi loại xu/khung hình; hình 3D tải riêng, không cập nhật React hoặc engine mỗi frame. Giới hạn độ phân giải, chỉ vẽ khi nhìn thấy và tự dừng khi ẩn tab/mở modal/Giảm chuyển động.
+- Giữ ảnh gốc dự phòng khi thiếu WebGL hoặc mất GPU context; khôi phục 3D khi context trở lại. Giữ schema 8/catalog 0.7.0, luật tính Coin, click và offline.
+- 286 kiểm thử đạt; typecheck/lint/catalog/format/build thành công. Kiểm tra Edge trên 5 kích thước, DPR 1/2, dừng/tiếp tục khi ẩn tab, cả hai thiết lập giảm chuyển động, mất/khôi phục context và 20 click trong lúc fallback. Chỉ một WebGL context cho toàn giao diện.
+
+## 1.7.0-rc.1 - 16/10/2026
+
+- Tháo thẻ trực tiếp ở ô trang bị; thêm/tháo ngay trên từng thẻ đã sở hữu, không phải cuộn tới phần chi tiết. Đầy ô sẽ hiện hướng dẫn tháo trước khi thêm.
+- Tự chọn thẻ thủ công sẽ tắt riêng Auto chọn thẻ; auto mua máy/nâng cấp bằng Coin giữ nguyên. Bộ thẻ được giữ cả khi tải lại và offline; có nút bật lại Auto chọn thẻ.
+- Save schema 8 lưu tùy chọn mới; chuyển schema 1–7 giữ tiến trình, thẻ, vật phẩm và lịch sử. Không thay đổi catalog 0.7.0 hoặc giá nâng cấp.
+- 283 kiểm thử đạt, typecheck/lint/catalog/format và build thành công. Thử trên Edge ở 5 kích thước, xác nhận thêm/tháo, tải lại, bật lại auto và không tràn ngang.
+
+## 1.6.0-rc.1 - 16/10/2026
+
+- Tích hợp đủ 102 PNG từ bộ CClick người dùng cung cấp, ánh xạ bằng ID catalog: máy, nâng cấp, thẻ, hỗ trợ, rương/chìa, cầu vồng, thành tích, tổ hợp và quà ngày.
+- Thay biểu tượng tạm bằng ảnh trong cửa hàng, màn hình chi tiết, kho tăng tốc, thẻ/trang bị/tổ hợp, rương, phần thưởng, thống kê và sự kiện cầu vồng.
+- Dùng chung ItemArtwork và RewardDisplay; tải ảnh khi cần, giữ tỷ lệ bằng object-fit contain, có ảnh vector dự phòng cho ID mới chưa có minh họa.
+- 277 kiểm thử đạt. Kiểm tra 41 trường hợp giao diện ở 4 kích thước, đủ 102 ID có ảnh tải được và không tràn ngang. Giữ nguyên dữ liệu kinh tế/schema 7/catalog 0.7.0.
+
 ## 1.5.0-rc.1 - 16/10/2026
 
 - Nền xu bạc và ánh sáng xanh theo ảnh tham chiếu, có ảnh nền dịch chậm, xu nổi và bụi sáng chuyển động riêng.

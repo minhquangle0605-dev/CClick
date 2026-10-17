@@ -128,14 +128,18 @@ export function createEngine(initial: GameState, catalog: GameCatalog, clock: Cl
         if (state.revision >= Number.MAX_SAFE_INTEGER) throw new RangeError('Revision limit');
         if (command.type !== 'ClickCoin') {
           const result =
-            command.type === 'SetAutoUpgrade'
+            command.type === 'SetAutoUpgrade' || command.type === 'SetAutoEquip'
               ? {
                   ok: true as const,
                   value: {
                     state: {
                       ...state,
                       revision: state.revision + 1,
-                      automation: { ...state.automation, upgradeEnabled: command.enabled },
+                      automation: {
+                        ...state.automation,
+                        [command.type === 'SetAutoUpgrade' ? 'upgradeEnabled' : 'autoEquipEnabled']:
+                          command.enabled,
+                      },
                     },
                     events: [{ type: 'AutomationChanged' as const }],
                   },

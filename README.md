@@ -2,13 +2,19 @@
 
 Game cá nhân với đồng xu bạc ngôi sao bốn cánh. Chạy trên máy của bạn, không có tài khoản, quảng cáo hay tiền thật.
 
+Bản 1.8 dựng **ba loại xu 3D**: xu bạc lớn có ngôi sao nổi, nghiêng theo chuột và phản hồi khi bấm; Gold có họa tiết rồng và xu cầu vồng xoay chậm. Tự dừng khi ẩn game, mở cửa sổ hoặc bật Giảm chuyển động. [Cấu trúc mô hình và cách chỉnh chuyển động](docs/22-3d-coins.md).
+
+Bản 1.7 cho phép **thêm/tháo thẻ ngay trên từng thẻ và ô trang bị**. Chọn thủ công sẽ giữ bộ thẻ cả khi offline; bật lại **Auto chọn thẻ** nếu muốn auto tối ưu. Xem [cách dùng và cấu trúc mã](docs/21-manual-card-equipment.md).
+
+Bản 1.6 tích hợp đủ **102 ảnh** từ bộ tài nguyên người dùng, dùng thống nhất ở cửa hàng, kho, thẻ, rương, quà, thành tích và thống kê. Xem [bảng ánh xạ và cách thay ảnh](docs/20-complete-asset-pack.md).
+
 Bản 1.5 có nền xu bạc động theo ảnh tham chiếu, tự tạm dừng khi tab ẩn/mở cửa sổ chức năng và tuân theo **Giảm chuyển động**. Xem [cấu trúc nền động](docs/19-animated-background.md).
 
 Bản 1.4: ba hỗ trợ có thời gian cộng dồn tối đa 24 giờ mỗi loại; Gold có hình đồng xu rồng; khung mưa vàng thu gọn nằm trên đồng xu chính lớn hơn. Xem [cấu trúc file và quy tắc hỗ trợ](docs/18-boosters-gold-layout.md).
 
-**Hiện tại: giai đoạn 7/7 (P6), bản chơi thử 1.5.0-rc.1.** Có 12 máy, 30 nâng cấp, 12 thẻ, 30 thành tích và toàn bộ hệ thống chơi cá nhân đã triển khai. Giao diện bố trí đồng xu, mưa vàng và cửa hàng trong một màn hình; toàn bộ khung xưởng có thanh cuộn riêng. Thống kê có danh sách vật phẩm/thẻ kèm hình ảnh và lịch sử nhận, tiêu. Nhãn RC được giữ vì âm thanh, cảm ứng trên thiết bị và phiên chơi dài vẫn cần trải nghiệm thực tế.
+**Hiện tại: giai đoạn 7/7 (P6), bản chơi thử 1.8.0-rc.1.** Có 12 máy, 30 nâng cấp, 12 thẻ, 30 thành tích và toàn bộ hệ thống chơi cá nhân đã triển khai. Giao diện bố trí đồng xu, mưa vàng và cửa hàng trong một màn hình; toàn bộ khung xưởng có thanh cuộn riêng. Thống kê có danh sách vật phẩm/thẻ kèm hình ảnh và lịch sử nhận, tiêu. Nhãn RC được giữ vì âm thanh, cảm ứng trên thiết bị và phiên chơi dài vẫn cần trải nghiệm thực tế.
 
-Tiến trình tự lưu sau click/mua, mỗi 10 giây và khi chuyển nền. Nhận thưởng, mở rương và thao tác vật phẩm chờ ghi thành công trước khi báo hoàn tất. Có 2 bản dự phòng tự động, bản **Trước reset gần nhất** lưu riêng, xuất/nhập JSON và chuyển save schema 1–6 sang schema 7/catalog 0.7.0, giữ tài nguyên và lịch nhận thưởng. Cài đặt âm thanh/rung/hiển thị được giữ khi reset.
+Tiến trình tự lưu sau click/mua, mỗi 10 giây và khi chuyển nền. Nhận thưởng, mở rương và thao tác vật phẩm chờ ghi thành công trước khi báo hoàn tất. Có 2 bản dự phòng tự động, bản **Trước reset gần nhất** lưu riêng, xuất/nhập JSON và chuyển save schema 1–7 sang schema 8/catalog 0.7.0, giữ tài nguyên và lịch nhận thưởng. Cài đặt âm thanh/rung/hiển thị được giữ khi reset.
 
 Để bắt đầu: auto click luôn chạy 10 lần/giây; bạn có thể chạm thêm hoặc bật **Auto nâng cấp** ở đầu xưởng để game mua máy và nâng cấp bằng Coin. Mở chi tiết vật phẩm để xem lợi ích và hoàn vốn ước tính. Phần khởi đầu được giữ; sáu máy mới và 24 nâng cấp mở rộng phần sau. [Báo cáo cân bằng trước auto](docs/balance/REPORT.md) là dữ liệu lịch sử; tốc độ chơi bản này đã thay đổi.
 
@@ -16,7 +22,7 @@ Tiến trình tự lưu sau click/mua, mỗi 10 giây và khi chuyển nền. Nh
 
 - **Auto nâng cấp** ưu tiên món đã mở và đủ Coin theo hiệu quả hoàn vốn; hiển thị mục tiêu, số còn thiếu và thời gian chờ ước tính. **Cài đặt → Hiển thị số** chọn Đầy đủ/Viết tắt, nhớ qua lần mở game. Tab **Tổng quan** đã có danh sách vật phẩm kèm hình và chi tiết nhận/tiêu. Xem [chi tiết bản cập nhật](docs/16-auto-display-fixes.md).
 - Auto click **0,1 giây/lần** và auto thu **Gold** luôn bật, kể cả khi tính offline. Nút **Auto nâng cấp** bật/tắt riêng, được lưu theo lượt chơi; mặc định tắt khi cập nhật save cũ.
-- Auto chỉ chi Coin cho máy/nâng cấp, tối ưu bộ thẻ trang bị đang có. Gold, vật phẩm và bản trùng thẻ giữ để tự dùng. Cầu vồng, thưởng ngày và thành tích vẫn thao tác thủ công.
+- Auto chỉ chi Coin cho máy/nâng cấp, tối ưu bộ thẻ trang bị đang có khi bật **Auto chọn thẻ**. Gold, vật phẩm và bản trùng thẻ giữ để tự dùng. Cầu vồng, thưởng ngày và thành tích vẫn thao tác thủ công.
 - Offline tối đa **24 giờ**. Coin từ máy và auto click hưởng 50% + bonus thẻ; Gold thu theo lịch đầy đủ. Khi bật auto nâng cấp, game mua tại từng thời điểm đủ tiền, không cộng sản lượng của máy mới vào cả khoảng vắng mặt.
 
 - Giao diện gọn: desktop hai cột; màn hình hẹp có nút chuyển **Chơi & mưa vàng / Xưởng nâng cấp**. Cuộn trong khung xưởng để xem toàn bộ chức năng. Xem [cách dùng auto và cấu trúc file](docs/14-automation.md).

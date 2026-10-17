@@ -27,7 +27,7 @@ describe('Versioned save codec', () => {
     await expect(decodeSave({ ...saved, checksum: '0'.repeat(64) }, catalog)).rejects.toMatchObject(
       { code: 'invalid' },
     );
-    await expect(decodeSave({ ...saved, schemaVersion: 8 }, catalog)).rejects.toMatchObject({
+    await expect(decodeSave({ ...saved, schemaVersion: 9 }, catalog)).rejects.toMatchObject({
       code: 'future-version',
     });
     await expect(decodeSave({ ...saved, contentVersion: '99.0.0' }, catalog)).rejects.toMatchObject(

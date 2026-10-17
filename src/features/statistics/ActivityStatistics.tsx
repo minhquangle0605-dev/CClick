@@ -4,7 +4,7 @@ import { sourceTotals } from '@core/progression/tracking';
 import { productionPerSecond, clickPower } from '@core/economy/selectors';
 import { offlineEfficiency } from '@core/cards/selectors';
 import { amount } from '@shared/amount';
-import { assets } from '@assets/asset-manifest';
+import { Coin3D } from '@ui/coins/Coin3D';
 import { Icon, type IconName } from '@ui/components/Icon';
 import { ItemArtwork } from '@ui/components/ItemArtwork';
 import { useNumberFormat } from '@ui/components/number-format';
@@ -19,14 +19,14 @@ type Metric = {
 };
 function MetricArtwork({ metric }: { metric: Metric }) {
   const label = text(`stats.${metric.id}`);
+  if (metric.id === 'rainbows') return <ItemArtwork id="coin.rainbow" label={label} size={52} />;
   if (metric.icon === 'coin' || metric.icon === 'gold')
     return (
-      <img
+      <Coin3D
         className="activity-artwork"
-        src={metric.icon === 'gold' ? assets.goldCoin : assets.silverCoin}
-        alt={label}
-        width="56"
-        height="56"
+        kind={metric.icon === 'gold' ? 'gold' : 'silver'}
+        label={label}
+        size={56}
       />
     );
   if (metric.icon === 'chest' || metric.icon === 'booster')

@@ -2,7 +2,7 @@
 
 `SaveRepository` và `BackupRepository` trong `core/ports` được thực thi bằng IndexedDB.
 Codec kiểm tra schema, checksum, sổ thu/chi và tham chiếu catalog trước khi trả dữ liệu
-cho bootstrap; save schema 1–6 được chuyển sang schema 7. Bộ schema mở rộng kiểm tra
+cho bootstrap; save schema 1–7 được chuyển sang schema 8. Bộ schema mở rộng kiểm tra
 inventory, hiệu ứng, Gold nguyên và trạng thái sự kiện/RNG. `collection-state.schema.ts`
 kiểm tra thẻ, ô trang bị, receipt rương và snapshot hiệu suất offline.
 `progression-state.schema.ts` kiểm tra lịch ngày, trạng thái mở/nhận thành tích và tổng nguồn thu.
@@ -26,3 +26,5 @@ Không đưa logic thưởng vào storage adapter hoặc animation React.
 `session.reset` chờ ghi xong rồi dùng một transaction tạo lượt mới ở primary/hai backup,
 giữ snapshot RAM cũ vào `reset-backup`. Key này không xoay theo autosave và không được
 loader chọn tự động; chỉ khôi phục qua preview và xác nhận. Settings giữ nguyên.
+
+Bản 1.7 thêm `automation.autoEquipEnabled` ở schema 8. Save schema 1–7 mặc định true để giữ hành vi cũ. Thêm/tháo thẻ thủ công thành công chuyển cờ này thành false, cùng giao dịch lưu bộ thẻ; không đổi `upgradeEnabled`. Lỗi ghi giữ nguyên cả hai. `SetAutoEquip` cho phép bật lại riêng quyền tối ưu thẻ.

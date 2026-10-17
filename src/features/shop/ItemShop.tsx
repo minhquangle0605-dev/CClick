@@ -8,6 +8,7 @@ import { MAX_ITEM_COUNT } from '@core/boosters/use-booster';
 import { text } from '@ui/components/text';
 import { inventoryDefinitions } from '@core/catalog/inventory';
 import { GoldArtwork } from '@ui/components/GoldArtwork';
+import { ItemArtwork } from '@ui/components/ItemArtwork';
 
 export function ItemShop({
   state,
@@ -38,6 +39,7 @@ export function ItemShop({
           const owned = state.inventory[item.id] ?? 0;
           return (
             <article className="item-offer" key={offer.id}>
+              <ItemArtwork id={item.id} size={64} />
               <strong>{text(item.nameKey)}</strong>
               <p title={text(item.descriptionKey)}>{text(item.descriptionKey)}</p>
               <small>

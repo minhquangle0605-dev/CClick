@@ -2,7 +2,7 @@ import { useNumberFormat, type NumberFormatter } from '@ui/components/number-for
 import { useState } from 'react';
 import type { GameState } from '@core/state/game-state';
 import type { GameCatalog } from '@core/catalog/catalog.types';
-import type { DurableAction } from '@core/engine/contracts';
+import type { DurableAction, DurableCommand } from '@core/engine/contracts';
 import type { CardTarget } from '@core/cards/card.types';
 import {
   cardSlots,
@@ -15,7 +15,7 @@ import { previewCardUpgrade, changeCard } from '@core/cards/commands';
 import { clickPower, productionPerSecond } from '@core/economy/selectors';
 import { amount } from '@shared/amount';
 import { text } from '@ui/components/text';
-import { Icon } from '@ui/components/Icon';
+import { ItemArtwork } from '@ui/components/ItemArtwork';
 import './cards.css';
 
 function displayEffect(target: CardTarget, value: string, format: NumberFormatter) {
@@ -41,6 +41,26 @@ export function CardsPanel({
   const [selected, setSelected] = useState(catalog.cards[0]!.id);
   const [filter, setFilter] = useState('all');
   const [message, setMessage] = useState('');
+  const [pending, setPending] = useState(false);
+  const busy = disabled || pending;
+  const slotsFull = state.cards.equipped.length >= cardSlots(state, catalog);
+  async function submit(command: DurableCommand, success = 'cards.saved') {
+    if (busy) return;
+    setPending(true);
+    setMessage('');
+    try {
+      const result = await onCommand(command);
+      setMessage(text(result.ok ? success : `action.error.${result.error}`));
+    } finally {
+      setPending(false);
+    }
+  }
+  function equip(cardId: string) {
+    void submit(
+      { type: state.cards.equipped.includes(cardId) ? 'UnequipCard' : 'EquipCard', cardId },
+      'cards.manualSaved',
+    );
+  }
   const card = catalog.cards.find((item) => item.id === selected)!;
   const owned = state.cards.owned[selected];
   const equipped = state.cards.equipped.includes(selected);
@@ -60,6 +80,32 @@ export function CardsPanel({
   return (
     <div className="cards-panel">
       <p className="info-note">{text('cards.rules')}</p>
+      <div className="card-automation">
+        <button
+          className="primary-button"
+          aria-pressed={state.automation.autoEquipEnabled}
+          disabled={busy}
+          onClick={() =>
+            void submit({ type: 'SetAutoEquip', enabled: !state.automation.autoEquipEnabled })
+          }
+        >
+          {text('cards.autoEquip')}:{' '}
+          {text(state.automation.autoEquipEnabled ? 'automation.on' : 'automation.off')}
+        </button>
+        <p className="info-note">
+          {text(
+            state.automation.autoEquipEnabled
+              ? state.automation.upgradeEnabled
+                ? 'cards.autoActive'
+                : 'cards.autoWaiting'
+              : 'cards.manualMode',
+          )}
+        </p>
+      </div>
+      <p className="info-note">{text('cards.manualHint')}</p>
+      <p role="status" className="action-message">
+        {message}
+      </p>
       <div className="equipment-bar">
         <strong>
           {text('cards.slots')} {state.cards.equipped.length}/{cardSlots(state, catalog)}
@@ -73,12 +119,40 @@ export function CardsPanel({
           const id = state.cards.equipped[index];
           const card = catalog.cards.find((item) => item.id === id);
           return (
-            <button key={index} disabled={!card} onClick={() => card && setSelected(card.id)}>
-              {card ? text(card.nameKey) : text('cards.emptySlot')}
-            </button>
+            <div className="equipped-slot" key={index}>
+              {card ? (
+                <>
+                  <button
+                    className="equipped-card-select"
+                    onClick={() => setSelected(card.id)}
+                    aria-label={`${text('cards.details')} ${text(card.nameKey)}`}
+                  >
+                    <ItemArtwork id={card.id} size={42} />
+                    {text(card.nameKey)}
+                  </button>
+                  <button
+                    className="slot-remove"
+                    disabled={busy}
+                    aria-label={`${text('cards.unequip')} ${text(card.nameKey)}`}
+                    onClick={() => equip(card.id)}
+                  >
+                    {text('cards.unequip')}
+                  </button>
+                </>
+              ) : (
+                <button className="equipped-card-select" onClick={() => setFilter('owned')}>
+                  <span className="empty-slot-symbol" aria-hidden="true">
+                    +
+                  </span>
+                  {text('cards.emptySlot')}
+                  <small>{text('cards.chooseOwned')}</small>
+                </button>
+              )}
+            </div>
           );
         })}
       </div>
+      {slotsFull && <p className="info-note">{text('cards.fullHint')}</p>}
       <div className="collection-filters" role="group" aria-label={text('cards.filter')}>
         {['all', 'owned', 'common', 'rare', 'epic'].map((filterId) => (
           <button
@@ -100,41 +174,53 @@ export function CardsPanel({
           )
           .map((item) => {
             const progress = state.cards.owned[item.id];
+            const isEquipped = state.cards.equipped.includes(item.id);
             return (
-              <button
+              <article
                 key={item.id}
+                data-card-id={item.id}
                 className={`technology-card rarity-${item.rarity} ${progress ? '' : 'card-locked'}`}
-                aria-pressed={selected === item.id}
-                onClick={() => {
-                  setSelected(item.id);
-                  setMessage('');
-                }}
+                data-selected={selected === item.id}
               >
-                <span className="card-emblem">
-                  <Icon
-                    name={
-                      item.rarity === 'epic'
-                        ? 'star'
-                        : item.rarity === 'rare'
-                          ? 'sparkles'
-                          : 'cards'
-                    }
-                    size={25}
-                  />
-                </span>
-                <small>{text(`cards.${item.rarity}`)}</small>
-                <strong>{text(item.nameKey)}</strong>
-                <span>
-                  {progress
-                    ? `${text('cards.level')} ${progress.level}/10 · ${text('cards.duplicates')} ${format(progress.duplicates)}`
-                    : text('cards.notOwned')}
-                </span>
-                {state.cards.equipped.includes(item.id) && <b>{text('cards.equipped')}</b>}
-              </button>
+                <button
+                  className="card-select"
+                  aria-pressed={selected === item.id}
+                  aria-label={`${text('cards.details')} ${text(item.nameKey)}`}
+                  onClick={() => {
+                    setSelected(item.id);
+                    setMessage('');
+                  }}
+                >
+                  <span className="card-emblem">
+                    <ItemArtwork id={item.id} size={100} />
+                  </span>
+                  <small>{text(`cards.${item.rarity}`)}</small>
+                  <strong>{text(item.nameKey)}</strong>
+                  <span>
+                    {progress
+                      ? `${text('cards.level')} ${progress.level}/10 · ${text('cards.duplicates')} ${format(progress.duplicates)}`
+                      : text('cards.notOwned')}
+                  </span>
+                  {isEquipped && <b>{text('cards.equipped')}</b>}
+                </button>
+                {progress && (
+                  <button
+                    className="primary-button card-equip"
+                    disabled={busy || (!isEquipped && slotsFull)}
+                    aria-label={`${text(isEquipped ? 'cards.unequip' : 'cards.equip')} ${text(item.nameKey)}`}
+                    onClick={() => equip(item.id)}
+                  >
+                    {text(
+                      isEquipped ? 'cards.unequip' : slotsFull ? 'cards.slotsFull' : 'cards.equip',
+                    )}
+                  </button>
+                )}
+              </article>
             );
           })}
       </div>
       <section className="card-detail">
+        <ItemArtwork id={card.id} size={160} className="artwork-detail" />
         <h3>{text(card.nameKey)}</h3>
         <p>{text(card.descriptionKey)}</p>
         <p className="info-note">{text('cards.timerRule')}</p>
@@ -222,12 +308,8 @@ export function CardsPanel({
             </div>
             <button
               className="primary-button"
-              disabled={disabled || !equipPreview.ok}
-              onClick={() => {
-                void onCommand(equipCommand).then((result) =>
-                  setMessage(text(result.ok ? 'cards.saved' : `action.error.${result.error}`)),
-                );
-              }}
+              disabled={busy || !equipPreview.ok}
+              onClick={() => equip(selected)}
             >
               {!equipPreview.ok
                 ? text(`action.error.${equipPreview.error}`)
@@ -249,14 +331,10 @@ export function CardsPanel({
                   )}
                   <button
                     className="primary-button"
-                    disabled={disabled || upgrade.error !== null}
-                    onClick={() => {
-                      void onCommand({ type: 'UpgradeCard', cardId: selected }).then((result) =>
-                        setMessage(
-                          text(result.ok ? 'cards.upgraded' : `action.error.${result.error}`),
-                        ),
-                      );
-                    }}
+                    disabled={busy || upgrade.error !== null}
+                    onClick={() =>
+                      void submit({ type: 'UpgradeCard', cardId: selected }, 'cards.upgraded')
+                    }
                   >
                     {upgrade.error
                       ? text(`action.error.${upgrade.error}`)
@@ -284,6 +362,7 @@ export function CardsPanel({
             className={synergies.some((item) => item.id === synergy.id) ? 'synergy-active' : ''}
           >
             <strong>{text(synergy.nameKey)}</strong>
+            <ItemArtwork id={synergy.id} size={64} />
             <small>
               {synergy.requires
                 .map((id) => text(catalog.cards.find((item) => item.id === id)!.nameKey))
@@ -305,9 +384,6 @@ export function CardsPanel({
           </article>
         ))}
       </section>
-      <p role="status" className="action-message">
-        {message}
-      </p>
     </div>
   );
 }

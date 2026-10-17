@@ -4,9 +4,10 @@ import type { GameState } from '@core/state/game-state';
 import type { GameCatalog } from '@core/catalog/catalog.types';
 import type { DurableAction } from '@core/engine/contracts';
 import { dailyStatus } from '@core/daily-rewards/calendar';
-import { rewardLabel } from '@features/rewards/reward-label';
+import { RewardDisplay } from '@features/rewards/RewardDisplay';
 import { text } from '@ui/components/text';
 import { Icon } from '@ui/components/Icon';
+import { ItemArtwork } from '@ui/components/ItemArtwork';
 import './daily.css';
 
 function countdown(seconds: number) {
@@ -77,10 +78,12 @@ export function DailyPanel({
             <span>
               {text('daily.claimNumber')} {day.day}
             </span>
-            <Icon name={day.day === 7 ? 'gem' : index < completed ? 'check' : 'star'} size={27} />
+            <ItemArtwork id={`daily.day-${day.day}`} size={128} />
             <ul>
               {day.rewards.map((reward, index) => (
-                <li key={index}>{rewardLabel(reward, catalog, state, format)}</li>
+                <li key={index}>
+                  <RewardDisplay reward={reward} catalog={catalog} state={state} />
+                </li>
               ))}
             </ul>
             <small>

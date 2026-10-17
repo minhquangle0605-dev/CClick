@@ -16,21 +16,11 @@ import {
 } from '@core/shop/quotes';
 import { amount } from '@shared/amount';
 import { Icon } from '@ui/components/Icon';
-import type { IconName } from '@ui/components/Icon';
+import { ItemArtwork } from '@ui/components/ItemArtwork';
 import { Modal } from '@ui/components/Modal';
 import { text } from '@ui/components/text';
 import './shop.css';
 
-const icons: Record<string, IconName> = {
-  'hand-press': 'hammer',
-  'auto-press': 'factory',
-  'polished-die': 'sparkles',
-  workshop: 'hammer',
-  factory: 'factory',
-  plasma: 'zap',
-  'star-core': 'star',
-  efficiency: 'trend',
-};
 export function ShopPanel({
   catalog,
   state,
@@ -145,7 +135,7 @@ export function ShopPanel({
             ))}
           </div>
           <div className="shop-items">
-            {items.map((item, index) => {
+            {items.map((item) => {
               const offer = quote(item);
               const owned =
                 'baseCps' in item
@@ -163,9 +153,7 @@ export function ShopPanel({
                     onClick={() => setSelected(item)}
                     aria-label={`${text('shop.inspect')}: ${text(item.nameKey)}`}
                   >
-                    <span className={`machine-icon machine-icon-${index}`}>
-                      <Icon name={icons[item.iconId] ?? 'factory'} size={24} />
-                    </span>
+                    <ItemArtwork id={item.id} size={52} />
                     <span className="machine-info">
                       <strong>{text(item.nameKey)}</strong>
                       <span>
@@ -222,6 +210,12 @@ export function ShopPanel({
           subtitle={text(selected.descriptionKey)}
           onClose={() => setSelected(null)}
         >
+          <ItemArtwork
+            id={selected.id}
+            label={text(selected.nameKey)}
+            size={160}
+            className="artwork-detail"
+          />
           <div className="item-details">
             <div>
               <span>

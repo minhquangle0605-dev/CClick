@@ -10,7 +10,7 @@ describe('Restore review UI', () => {
     const { state, catalog, clock } = gameFixture();
     state.wallet.coin = state.statistics.totalProducedCoin = '123';
     const candidate: SaveEnvelope = {
-      schemaVersion: 7,
+      schemaVersion: 8,
       contentVersion: catalog.balance.contentVersion,
       appVersion: '0.4.0',
       savedAtUtc: clock.nowUtc(),

@@ -24,6 +24,7 @@ export function createInitialState(catalog: GameCatalog, runId: string, nowUtc: 
     offlineClickPower: catalog.balance.baseClick,
     automation: {
       upgradeEnabled: false,
+      autoEquipEnabled: true,
       clickRemainderMs: 0,
       automaticClicks: 0,
       actions: 0,

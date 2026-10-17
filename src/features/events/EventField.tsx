@@ -6,6 +6,7 @@ import type { GameState } from '@core/state/game-state';
 import type { DurableAction } from '@core/engine/contracts';
 import { text } from '@ui/components/text';
 import { GoldArtwork } from '@ui/components/GoldArtwork';
+import { Coin3D } from '@ui/coins/Coin3D';
 import './events.css';
 
 export function EventField({
@@ -76,7 +77,7 @@ export function EventField({
               });
             }}
           >
-            {object.kind === 'gold' ? <GoldArtwork size={34} /> : <span aria-hidden="true">✦</span>}
+            <Coin3D kind={object.kind} size={34} paused={disabled} reducedMotion={reducedMotion} />
             <small>{Math.ceil((object.expiresAt - events.activeMs) / 1000)}s</small>
           </button>
         ))}

@@ -51,7 +51,7 @@ export function createUpgradePlanner(catalog: GameCatalog, offline: boolean) {
       let count = 0;
       // Bound work per visible tick. Offline uses the same policy and resumes at the next boundary.
       for (let attempt = 0; attempt < 32; attempt++) {
-        const loadout = optimize(state, offline);
+        const loadout = state.automation.autoEquipEnabled ? optimize(state, offline) : state.cards;
         if ([...loadout.equipped].sort().join() !== [...state.cards.equipped].sort().join()) {
           state = changed(
             {

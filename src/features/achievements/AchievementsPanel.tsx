@@ -4,9 +4,10 @@ import type { GameState } from '@core/state/game-state';
 import type { GameCatalog } from '@core/catalog/catalog.types';
 import type { DurableAction } from '@core/engine/contracts';
 import { achievementStatus } from '@core/achievements/selectors';
-import { rewardLabel } from '@features/rewards/reward-label';
+import { RewardDisplay } from '@features/rewards/RewardDisplay';
 import { text } from '@ui/components/text';
 import { Icon } from '@ui/components/Icon';
+import { ItemArtwork } from '@ui/components/ItemArtwork';
 import './achievements.css';
 
 export function AchievementsPanel({
@@ -56,7 +57,8 @@ export function AchievementsPanel({
           .map((row) => (
             <article className={row.ready ? 'achievement-ready' : ''} key={row.definition.id}>
               <div className="achievement-heading">
-                <Icon name={row.claimed ? 'check' : 'trophy'} size={23} />
+                <ItemArtwork id={row.definition.id} size={64} />
+                {row.claimed && <Icon name="check" size={18} />}
                 <h3>{text(row.definition.nameKey)}</h3>
               </div>
               <p>
@@ -68,7 +70,9 @@ export function AchievementsPanel({
               <progress aria-label={text(row.definition.nameKey)} value={row.percent} max={100} />
               <ul>
                 {row.definition.rewards.map((reward, index) => (
-                  <li key={index}>{rewardLabel(reward, catalog, state, format)}</li>
+                  <li key={index}>
+                    <RewardDisplay reward={reward} catalog={catalog} state={state} />
+                  </li>
                 ))}
               </ul>
               <button

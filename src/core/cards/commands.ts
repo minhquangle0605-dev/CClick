@@ -110,5 +110,9 @@ export function changeCard(
       },
     };
   }
+  // A successful manual loadout change takes ownership away from the optimizer.
+  // Keep Coin automation enabled, including during offline settlement.
+  if (command.type !== 'UpgradeCard')
+    next.automation = { ...state.automation, autoEquipEnabled: false };
   return { ok: true, value: { state: next, events: [{ type: 'CardChanged', cardId: id }] } };
 }

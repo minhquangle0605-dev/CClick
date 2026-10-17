@@ -6,8 +6,7 @@ import type { DurableAction } from '@core/engine/contracts';
 import { previewBooster } from '@core/boosters/use-booster';
 import { temporaryMultiplier } from '@core/effects/pipeline';
 import { text } from '@ui/components/text';
-import { Icon } from '@ui/components/Icon';
-import type { IconName } from '@ui/components/Icon';
+import { ItemArtwork } from '@ui/components/ItemArtwork';
 import { formatEffectDuration } from './format-effect-duration';
 import './boosters.css';
 
@@ -41,7 +40,7 @@ export function BoostersPanel({
               setMessage('');
             }}
           >
-            <Icon name={item.iconId as IconName} />
+            <ItemArtwork id={item.id} size={88} />
             <strong>{text(item.nameKey)}</strong>
             <span>
               {text('shop.owned')} {format(state.inventory[item.id] ?? 0)}
@@ -52,6 +51,7 @@ export function BoostersPanel({
       </div>
       {item && preview && (
         <div className="booster-preview">
+          <ItemArtwork id={item.id} size={120} className="artwork-detail" />
           <h3>
             {text('boosters.preview')} · {text(item.nameKey)}
           </h3>
@@ -122,7 +122,7 @@ export function EffectsBar({
               className={id === 'event.frenzy' ? 'effect-chip frenzy-chip' : 'effect-chip'}
               key={id}
             >
-              <Icon name="zap" size={14} />
+              <ItemArtwork id={id === 'event.frenzy' ? 'coin.rainbow' : id} size={28} />
               {id === 'event.frenzy' ? text('events.frenzy') : text(item?.nameKey ?? id)}{' '}
               <b>{formatEffectDuration(remaining / 1000)}</b>
             </span>

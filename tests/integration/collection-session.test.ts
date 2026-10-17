@@ -14,7 +14,7 @@ describe('Durable collection and schema 4', () => {
       readFileSync(new URL('../fixtures/saves/v4.json', import.meta.url), 'utf8'),
     );
     const save = await decodeSave(raw, catalog);
-    expect(save.schemaVersion).toBe(7);
+    expect(save.schemaVersion).toBe(8);
     for (const key of ['wallet', 'cards', 'chests', 'events'] as const)
       expect(save.payload[key]).toEqual(raw.payload[key]);
     expect(save.payload.chests).toMatchObject({ opened: 1, acknowledged: false });
@@ -169,7 +169,7 @@ describe('Durable collection and schema 4', () => {
         readFileSync(new URL(`../fixtures/saves/v${version}.json`, import.meta.url), 'utf8'),
       );
       const loaded = await decodeSave(raw, catalog);
-      expect(loaded.schemaVersion).toBe(7);
+      expect(loaded.schemaVersion).toBe(8);
       expect(loaded.payload.wallet).toEqual(raw.payload.wallet);
       expect(loaded.payload.statistics).toEqual({ ...raw.payload.statistics, totalGiftCoin: '0' });
       expect(loaded.payload.cards).toEqual({ owned: {}, equipped: [] });

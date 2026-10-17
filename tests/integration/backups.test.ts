@@ -18,7 +18,7 @@ describe('Two backups, recovery, migration and file boundary', () => {
       readFileSync(new URL('../fixtures/saves/v3.json', import.meta.url), 'utf8'),
     );
     const save = await decodeSave(raw, catalog);
-    expect(save.schemaVersion).toBe(7);
+    expect(save.schemaVersion).toBe(8);
     expect(save.payload.wallet).toEqual({ coin: '1006', goldCoin: '26' });
     expect(save.payload.inventory['booster.turbo-mint']).toBe(1);
     expect(save.payload.effects[0]!.expiresAt - save.payload.effectsAtMs).toBe(57000);
@@ -79,10 +79,10 @@ describe('Two backups, recovery, migration and file boundary', () => {
     const repository = await openSaveRepository(catalog, factory);
     const saved = await createSave(state, catalog, clock.nowUtc());
     await repository.save(saved);
-    await writeRaw(factory, 'primary', { ...saved, schemaVersion: 8 });
+    await writeRaw(factory, 'primary', { ...saved, schemaVersion: 9 });
     await expect(repository.load()).rejects.toMatchObject({ code: 'future-version' });
     await expect(repository.save(saved)).rejects.toMatchObject({ code: 'future-version' });
-    expect(await repository.readDamaged()).toEqual({ ...saved, schemaVersion: 8 });
+    expect(await repository.readDamaged()).toEqual({ ...saved, schemaVersion: 9 });
     repository.close();
   });
   it('rejects stale revisions and keeps the committed primary', async () => {
@@ -116,7 +116,7 @@ describe('Two backups, recovery, migration and file boundary', () => {
       readFileSync(new URL('../fixtures/saves/v1.json', import.meta.url), 'utf8'),
     );
     const migrated = await decodeSave(raw, catalog);
-    expect(migrated.schemaVersion).toBe(7);
+    expect(migrated.schemaVersion).toBe(8);
     expect(migrated.contentVersion).toBe('0.7.0');
     expect(migrated.payload.wallet.coin).toBe('100');
     expect(migrated.payload.offlineCps).toBe('0');

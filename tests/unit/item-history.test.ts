@@ -144,7 +144,7 @@ describe('Lifetime item accounting', () => {
         readFileSync(new URL(`../fixtures/saves/v${version}.json`, import.meta.url), 'utf8'),
       );
       const save = await decodeSave(raw, catalog);
-      expect(save.schemaVersion).toBe(7);
+      expect(save.schemaVersion).toBe(8);
       expect(save.payload.itemHistory.complete).toBe(false);
       expect(save.payload.wallet).toEqual(raw.payload.wallet);
       expect(save.payload.inventory).toEqual(raw.payload.inventory ?? {});

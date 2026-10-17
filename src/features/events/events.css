@@ -66,25 +66,9 @@
   touch-action: manipulation;
   color: #fff1c2;
 }
-.event-coin > span {
-  display: grid;
-  place-content: center;
-  width: 34px;
-  height: 34px;
+.event-coin > .coin-3d {
+  display: block;
   margin-inline: auto;
-  border-radius: 50%;
-  border: 2px solid #ffe1a3;
-  background: linear-gradient(135deg, #fce6a5, #b27522 65%, #ffe4a8);
-  color: #604015;
-  font-size: 30px;
-  box-shadow: 0 0 18px #e8af4933;
-  animation: event-shimmer 1.5s ease-in-out infinite alternate;
-}
-.event-rainbow > span {
-  background: conic-gradient(#e9a8c8, #c3b7ff, #92e6dc, #f5e8a5, #e9a8c8);
-  border-color: #eee4ff;
-  color: #493759;
-  box-shadow: 0 0 22px #c0a4ff55;
 }
 .event-rainbow {
   grid-column: 6;
@@ -95,6 +79,10 @@
   display: block;
   line-height: 1.2;
   color: #d3c5ad;
+}
+.event-coin > .item-artwork {
+  margin-inline: auto;
+  border-radius: 50%;
 }
 .event-coin:focus-visible {
   outline: 2px solid white;
@@ -112,23 +100,6 @@
 }
 .rain-active {
   border-color: #e7b96065;
-}
-@keyframes event-shimmer {
-  from {
-    filter: brightness(1);
-  }
-  to {
-    filter: brightness(1.17);
-  }
-}
-.events-still .event-coin > span,
-.motion-off .event-coin > span {
-  animation: none;
-}
-@media (prefers-reduced-motion: reduce) {
-  .event-coin > span {
-    animation: none;
-  }
 }
 @media (max-width: 600px) {
   .event-heading,

@@ -1,0 +1,21 @@
+.reward-display {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  max-width: 100%;
+  vertical-align: middle;
+}
+.reward-display > img {
+  flex-shrink: 0;
+  object-fit: contain;
+}
+.reward-display > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.daily-grid li,
+.achievement-list li,
+.chest-result li,
+.chest-preview li {
+  margin-block: 5px;
+}

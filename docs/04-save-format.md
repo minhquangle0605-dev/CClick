@@ -1,4 +1,4 @@
-# Lưu tiến trình — schema 7, app 1.5.0-rc.1
+# Lưu tiến trình — schema 8, app 1.8.0-rc.1
 
 `GameState` chứa ví Coin/Gold, số máy theo ID, ID nâng cấp đã mua, thống kê, runId, revision, `lastSimulatedAtUtc` và `offlineCps`. Tiền là chuỗi thập phân. `offlineCps` là snapshot của sản lượng thường trực khi dừng, dùng cho khoảng vắng mặt; CPS hiện tại vẫn suy ra từ catalog và sở hữu. Không lưu React state, modal hay tùy chọn hiển thị vào gameplay save.
 
@@ -12,7 +12,9 @@ Schema 6 thêm `offlineClickPower` và `automation` (upgradeEnabled, clickRemain
 
 Schema 7 thêm `itemHistory`: mốc `sinceUtc`, cờ lịch sử đầy đủ `complete` và `entries` theo ID vật phẩm/thẻ. Mỗi mục lưu tồn đầu `opening`, số nhận `earned` theo nguồn và số tiêu `spent` theo cách dùng. Số lượng là số nguyên an toàn; từng mục phải thỏa `opening + earned − spent = hiện có`. Thẻ tính theo số bản, không theo cấp. Ghi lịch sử cùng giao dịch thay đổi kho; không ghi từ UI. Xem [quy tắc thống kê vật phẩm](15-item-statistics.md).
 
-Envelope hiện gồm `schemaVersion: 7`, `contentVersion: 0.7.0`, `appVersion: 1.5.0-rc.1`, UTC lưu, checksum và payload. SHA-256 tính trên envelope bỏ trường checksum, JSON chuẩn hóa key theo alphabet, UTF-8, giữ thứ tự mảng. Checksum phát hiện hỏng/sửa nhầm, không nhằm chống người chơi chỉnh game của mình.
+Schema 8 thêm `automation.autoEquipEnabled`. Cờ này mặc định true cho save mới và khi chuyển schema 1–7, giữ hành vi tối ưu cũ. Thêm/tháo thẻ thành công đặt false trong cùng giao dịch, không đổi `upgradeEnabled`; lệnh `SetAutoEquip` bật/tắt quyền đổi thẻ riêng. Cả mô phỏng online và offline tôn trọng cờ này.
+
+Envelope hiện gồm `schemaVersion: 8`, `contentVersion: 0.7.0`, `appVersion: 1.8.0-rc.1`, UTC lưu, checksum và payload. SHA-256 tính trên envelope bỏ trường checksum, JSON chuẩn hóa key theo alphabet, UTF-8, giữ thứ tự mảng. Checksum phát hiện hỏng/sửa nhầm, không nhằm chống người chơi chỉnh game của mình.
 
 P6 chỉ mở rộng catalog, không đổi cấu trúc payload. Save schema 5/catalog 0.5.0 được xác minh checksum cũ rồi tạo envelope/checksum catalog 0.6.0. Giữ nguyên ví, sở hữu, daily, claim thành tích, RNG, receipt và nguồn thu. Các ID/hiệu ứng cũ không bị đổi; snapshot offline vẫn dùng mức đã lưu cho khoảng vắng trước cập nhật. Codec tiếp tục chặn catalog/schema tương lai chưa biết. `shared/version.ts` là nguồn phiên bản app cho UI và save.
 
@@ -38,7 +40,7 @@ Codec kiểm tra schema nghiêm ngặt, checksum, miền Amount, counter, số m
 
 Save schema 1/catalog 0.1.0, schema 2/catalog 0.2.0, schema 3/catalog 0.3.0 và schema 4/catalog 0.4.0 được xác minh checksum **trước** migration. Giữ ví, sở hữu, thống kê và runId; schema 1 bổ sung offlineCps theo hai máy P1, schema 2–4 giữ offlineCps đã lưu. Chỉ schema 1/2 được thêm kho/effect rỗng và lịch mưa khởi đầu; schema 3/4 giữ nguyên kho, effect và RNG sự kiện. Schema 1–3 thêm thẻ rỗng, seed rương từ runId với hậu tố `:chests`, hiệu suất offline 0,5, totalGift=0 và mốc rương chưa nhận; schema 4 giữ toàn bộ thẻ/rương/receipt/hiệu suất cũ.
 
-Các bản 1–4 thêm tracking bằng 0, daily chưa nhận với highestDay theo checkpoint, và mở khóa các thành tích suy ra được từ thống kê/sở hữu. Không tự tặng quà, không đoán lịch sử Gold/sự kiện. Schema 1–5 thêm trường automation với mặc định tắt và offlineClickPower = 0; schema 5 giữ nguyên lịch sử daily, achievement và tracking. Schema 6 giữ nguyên automation. Bản 1–6 thêm `itemHistory` với `complete=false`, tồn đầu bằng số đang sở hữu, số nhận/tiêu mới bằng 0 và mốc bằng checkpoint save cũ. Không suy đoán tổng lịch sử từng món. Sau đó tạo envelope/checksum schema 7/catalog 0.7.0. Boot ghi bản đã migrate/quyết toán trước khi mở UI. Fixture cố định:
+Các bản 1–4 thêm tracking bằng 0, daily chưa nhận với highestDay theo checkpoint, và mở khóa các thành tích suy ra được từ thống kê/sở hữu. Không tự tặng quà, không đoán lịch sử Gold/sự kiện. Schema 1–5 thêm trường automation với mặc định tắt và offlineClickPower = 0; schema 5 giữ nguyên lịch sử daily, achievement và tracking. Schema 6 giữ nguyên automation. Bản 1–6 thêm `itemHistory` với `complete=false`, tồn đầu bằng số đang sở hữu, số nhận/tiêu mới bằng 0 và mốc bằng checkpoint save cũ. Không suy đoán tổng lịch sử từng món. Sau đó tạo envelope/checksum schema 8/catalog 0.7.0. Boot ghi bản đã migrate/quyết toán trước khi mở UI. Fixture cố định:
 
 - `tests/fixtures/saves/v1.json`: 100 Coin, 100 click, chưa có máy.
 - `tests/fixtures/saves/v2.json`: số dư có phần lẻ, ba máy, hai nâng cấp và offlineCps 2,4.

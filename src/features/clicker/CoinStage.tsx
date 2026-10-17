@@ -1,6 +1,6 @@
 import { useNumberFormat } from '@ui/components/number-format';
 import { useEffect, useRef, useState } from 'react';
-import { assets } from '@assets/asset-manifest';
+import { Coin3D } from '@ui/coins/Coin3D';
 import { Icon } from '@ui/components/Icon';
 import { text } from '@ui/components/text';
 import './clicker.css';
@@ -92,7 +92,7 @@ export function CoinStage({
           }}
           aria-label={text('home.coinLabel')}
         >
-          <img src={assets.silverCoin} alt="" width="480" height="480" draggable="false" />
+          <Coin3D kind="silver" size={480} hero paused={disabled} reducedMotion={reducedMotion} />
         </button>
       </div>
       <p className="coin-touch">

@@ -23,6 +23,11 @@
   grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
+.chest-inventory > span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
 .chest-choices button {
   display: flex;
   flex-direction: column;
